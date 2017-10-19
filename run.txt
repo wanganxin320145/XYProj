@@ -1,0 +1,8 @@
+REM 打开服务所在位置
+cd E:\RIGHTIC_HUB_0817\02-SourceCode\FrontEnd\0926\wwwroot
+
+REM 运行proxy代理
+START node proxy.js
+
+REM 运行websocket服务
+START node _chatServer.js

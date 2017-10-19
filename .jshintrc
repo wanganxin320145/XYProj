@@ -1,0 +1,12 @@
+{
+    "strict": "global", //js文件顶部必须带"'use strict';"
+    "freeze": true, //不允许修改原生对象的原型
+    "node": true, //NodeJS环境（允许require等为全局变量）
+    "browser": true, //浏览器环境（允许document等为全局变量）
+    "jquery": true, //jQuery环境（允许$或jQuery为全局变量）
+    "predef": [ //其它全局变量
+        "U",
+        "Module"
+    ],
+    "asi": false //不允许省略分号
+}

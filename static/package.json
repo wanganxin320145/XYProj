@@ -1,0 +1,15 @@
+{
+  "name": "ICH_static",
+  "version": "1.0.0",
+  "description": "ICH_static",
+  "main": "proxy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sam",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.16.2",
+    "http-proxy-middleware": "^0.17.4"
+  }
+}

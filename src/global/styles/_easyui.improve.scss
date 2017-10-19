@@ -1,0 +1,300 @@
+$color-selected:#ffe6cd;
+$color-hover:rgba(#cad5db, .3);
+
+//loading
+.panel-loading,
+.datagrid-mask-msg,
+.pagination-loading,
+.tree-loading {
+    background-image: url("../images/loading.gif");
+    background-size: 16px 16px;
+}
+
+
+
+//linkbutton
+.l-btn {
+    user-select: none;
+}
+
+.l-btn-text {
+    color: #000;
+    white-space: nowrap;
+}
+
+.l-btn-focus {
+    outline: none;
+}
+
+.l-btn-disabled,
+.l-btn-disabled:hover {
+    opacity: .4;
+}
+
+
+
+//pagination
+.pagination {
+    color: #666;
+    background: #fff;
+    border-top: 0 !important;
+    white-space: nowrap;
+    min-width: 480px;
+}
+
+.pagination-page-list {
+    box-sizing: border-box;
+    height: 23px;
+    padding: 0;
+}
+
+.pagination .pagination-num {
+    box-sizing: border-box;
+    height: 23px;
+    text-align: center;
+}
+
+.pagination-first,
+.pagination-prev,
+.pagination-next,
+.pagination-last {
+    opacity: .5;
+}
+
+.pagination-load {
+    opacity: .8;
+}
+
+.pagination-info {
+    float: left;
+    margin: 0 0 0 10px;
+}
+
+
+
+//panel
+.panel-header {
+    border: none;
+    background: #d9d9d9;
+    text-shadow: 0 0 4px rgba(#fff, .8);
+}
+
+.panel-title {
+    max-width: calc(100% - 50px);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #333;
+}
+
+.panel-tool a {
+    cursor: pointer;
+}
+
+
+
+//window
+.window {
+    background: #d9d9d9;
+}
+
+.window .window-body {
+    border: none;
+}
+
+.window-proxy-mask,
+.window-mask {
+    background: #fff;
+    opacity: .6;
+}
+
+.window-proxy-mask {
+    opacity: .3;
+}
+
+.window-shadow {
+    box-shadow: 0 0 8px rgba(#000, .6);
+}
+
+
+
+//dialog
+.dialog-button {
+    border-color: transparent;
+}
+
+.dialog-toolbar,
+.dialog-button {
+    background: mix(#d9d9d9, #fff, 30%);
+}
+
+
+
+//datagrid
+.datagrid-htable {
+    font-weight: bold;
+    color: #666;
+}
+
+.datagrid-btable,
+.datagrid-ftable {
+    color: #333;
+}
+
+.datagrid-header td,
+.datagrid-body td,
+.datagrid-footer td {
+    padding: 5px 0 4px;
+    border-style: solid;
+    border-color: #d9d9d9;
+}
+
+.datagrid-header-check,
+.datagrid-cell-check {
+    width: 22px;
+}
+
+.datagrid-header-check input,
+.datagrid-cell-check input {
+    height: 15px;
+    vertical-align: middle;
+    cursor: default;
+}
+
+.datagrid-sort-icon {
+    cursor: pointer;
+    opacity: .6;
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.datagrid-row-over {
+    background: $color-hover;
+    color: inherit;
+}
+
+.datagrid-header td.datagrid-header-over {
+    background: none;
+    color: #666;
+}
+
+.datagrid-row-selected {
+    background: $color-selected;
+    color: #000;
+}
+
+.datagrid-header,
+.datagrid-td-rownumber {
+    background: #f2f2f2;
+}
+
+.datagrid-toolbar {
+    min-height: 27px;
+    border: none;
+    background: #d9d9d9;
+}
+
+._cursor-pointer-datagrid .datagrid-row {
+    cursor: pointer;
+}
+
+
+
+//tabs
+.tabs-header {
+    background: #d9d9d9;
+    padding-top: 0;
+    text-shadow: 0 0 4px rgba(#fff, .8);
+}
+
+.tabs {
+    padding-left: 0;
+}
+
+.tabs li {
+    height: 100%;
+    margin: 0;
+}
+
+.tabs li a.tabs-inner {
+    padding: 0 16px;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    color: #333;
+    font-weight: bold;
+}
+
+.tabs li a.tabs-inner:hover {
+    background: rgba(#fff, .4);
+}
+
+.tabs li.tabs-selected a.tabs-inner {
+    background: #fff;
+    color: #333;
+}
+
+.tabs li .tabs-p-tool {
+    transform: scale(0);
+}
+
+.tabs li .tabs-p-tool a {
+    background-size: contain;
+    vertical-align: top;
+}
+
+.tabs li.tabs-selected .tabs-p-tool {
+    transform: scale(1);
+}
+
+._tabs-scroll-disable .tabs-wrap {
+    margin: 0 !important;
+    width: 100% !important;
+}
+
+._tabs-scroll-disable .tabs-scroller-left,
+._tabs-scroll-disable .tabs-scroller-right {
+    display: none !important;
+}
+
+
+
+//combobox
+.combo-p {
+    box-shadow: 0 0 3px 0 #D3D3D3;
+}
+
+.combobox-item-hover {
+    background-color: $color-hover;
+}
+
+.combobox-item-selected {
+    background-color: $color-selected;
+    color: #000;
+}
+
+
+
+//calendar
+.calendar-nav-hover {
+    background-color: $color-hover;
+}
+
+.calendar-selected {
+    background-color: $color-selected;
+    color: #000;
+    border-color: #f90;
+}
+
+
+
+//tree
+.tree-node-hover {
+    background-color: $color-hover;
+}
+
+.tree-node-selected {
+    background-color: $color-selected;
+    color: #000;
+}

@@ -1,0 +1,97 @@
+//动画：淡入/淡出
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+//滚动条定制（webkit内核）
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: rgba(#000, .2);
+    border: 2px solid #fff;
+    &:hover {
+        background-color: rgba(#000, .3);
+    }
+}
+
+
+
+//消息推送（数字和圆点）
+.message-num {
+    display: inline-block;
+    font-size: 12px;
+    text-indent: 0;
+    font-weight: normal;
+    line-height: 1;
+    padding: 1px 4px;
+    border-radius: 7px;
+    color: #fff;
+    background: rgba(#f30, .8);
+    &:empty {
+        display: none;
+    }
+}
+
+.message-dot {
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background: rgba(#f30, .8);
+}
+
+
+
+//用<div>取代<a>时，设置鼠标手型
+[data-href] {
+    cursor: pointer;
+}
+
+
+
+//单行文本溢出自动带省略号
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+//将视图最大化
+.maximize {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 999 !important;
+    width: 100% !important;
+    height: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.container{
+    width:970px;
+}
+*{
+    box-sizing: border-box;
+}

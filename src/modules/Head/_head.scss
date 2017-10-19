@@ -1,0 +1,67 @@
+$height:85px;
+.m-header-fixed {
+    height: $height;
+    >.m-header {
+        width: 100%;
+        height: $height;
+        z-index: 1000;
+        position: fixed;
+        right: 0;
+        left: 0;
+        border-bottom: 2px solid #0bA1E4;
+        box-shadow: 0 0 5px silver;
+        background-color: #fff;
+        opacity: 0.8;
+        >.container {
+            white-space: nowrap;
+            line-height: $height;
+            >.m-head-logo {
+                max-width: 130px;
+                height: $height;
+                line-height: $height;
+                float: left;
+            }
+            >.m-head-menu {
+                float: right;
+                line-height: $height;
+                display: none;
+                >ul {
+                    >li {
+                        display: inline-block;
+                        width: 100px;
+                        >a {
+                            font-size: 15px;
+                            color: silver;
+                        }
+                    }
+                }
+            }
+            >.floader {
+                width: 60px;
+                height: $height;
+                float: right;
+                >.dropdownmenu {
+                	width: 50px;
+                	height:50px;
+                	border: 1px solid silver;
+                	background-color: silver;
+                	position: relative;
+                	padding: 5px 0px;
+                    >ul {
+                        position: absolute;
+                        top: $height;
+                        left: 0;
+                        >li {
+                            width: 100px;
+                            height: 30px;
+                            >a {
+                                font-size: 15px;
+                                color: black;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

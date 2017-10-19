@@ -1,0 +1,238 @@
+$h: 32px;
+$on-bg: #cad5db;
+$hover-bg: rgba($on-bg, .4);
+@mixin msg-position {
+    vertical-align: middle;
+    position: relative;
+    top: -6px;
+}
+
+.m-spaHeader {
+    height: $h;
+    background: #fff;
+    @at-root .m-spaHeader-logo {
+        float: left;
+        height: 100%;
+        width: 124px;
+        background: url("../../../global/images/logo.png") no-repeat center;
+        background-size: auto 100%;
+    }
+    @at-root .m-spaHeader-tabs {
+        float: left;
+        height: 100%;
+        user-select: none;
+        ul {
+            line-height: $h;
+            >li {
+                position: relative;
+                padding: 0 24px 0 20px;
+                cursor: pointer;
+                >._text {
+                    font-size: 13px;
+                    font-weight: bold;
+                    color: #333;
+                }
+                >.message-dot,
+                >.message-num {
+                    @include msg-position;
+                }
+                >i {
+                    $size: 16px;
+                    position: absolute;
+                    right: 4px;
+                    top: $h/2 - $size/2;
+                    height: $size;
+                    width: $size;
+                    line-height: $size;
+                    font-size: 12px;
+                    text-align: center;
+                    border-radius: 50%;
+                    opacity: .3;
+                    &::after {
+                        content: "X";
+                    }
+                    &:hover {
+                        color: #f30;
+                        background: #fff;
+                        box-shadow: 0 0 3px rgba(#000, .6);
+                    }
+                }
+                &:hover {
+                    background: $hover-bg;
+                    >i {
+                        transition: all .3s;
+                        opacity: 1;
+                    }
+                }
+                &._on {
+                    background: $on-bg;
+                    cursor: default;
+                    >._text {
+                        color: #c00;
+                        text-shadow: 0 0 10px #fff;
+                    }
+                    >i {
+                        display: block;
+                        animation: none;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        $overflow-w: 32px;
+        >ul {
+            float: left;
+            height: 100%;
+            max-width: calc(100% - #{$overflow-w});
+            box-sizing: border-box;
+            padding: 0 6px 0 10px;
+            overflow: hidden;
+            >li {
+                float: left;
+                height: 100%;
+                transition: transform .3s;
+                &:first-child>i {
+                    display: none;
+                }
+                &._dragenter::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    border-left: 3px dotted #0c0;
+                    background: #fff;
+                }
+                &._move-finish {
+                    transition: none;
+                    transform: scaleX(0);
+                }
+            }
+        }
+        >._overflow {
+            $offset: 7px;
+            display: none;
+            float: left;
+            height: 100%;
+            width: $overflow-w;
+            position: relative;
+            &::before {
+                content: "...";
+                display: block;
+                width: $overflow-w;
+                height: $h;
+                line-height: $h;
+                text-align: center;
+                font-size: 16px;
+                font-weight: bold;
+                color: #999;
+                cursor: default;
+            }
+            &::after {
+                display: none;
+                content: "";
+                position: absolute;
+                right: $overflow-w/2 - $offset;
+                top: $h - $offset;
+                border: $offset solid transparent;
+                border-bottom-color: #fff;
+            }
+            >ul {
+                display: none;
+                position: absolute;
+                right: -$h/2;
+                top: $h + $offset - 1px;
+                padding: 10px 0;
+                box-shadow: 0 0 10px rgba(#000, .4);
+                background: #fff;
+                white-space: nowrap;
+                >li {
+                    min-width: 66px;
+                    padding: 0 30px 0 25px;
+                    border-top: 1px solid #e5e5e5;
+                    &:first-child {
+                        border-top: none;
+                    }
+                }
+            }
+            &:hover {
+                z-index: 999;
+                &::before {
+                    height: $h + $offset;
+                    background-color: $hover-bg;
+                    color: #666;
+                }
+                >ul,
+                &::after {
+                    display: block;
+                }
+            }
+            &._mouseleave {
+                >ul,
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+    @at-root .m-spaHeader-right {
+        float: right;
+        height: 100%;
+        >div {
+            float: left;
+            height: 100%;
+            line-height: $h;
+            margin-left: 6px;
+            padding: 0 5px;
+        }
+        >._message {
+            position: relative;
+            cursor: default;
+            &:hover {
+                background-color: $hover-bg;
+            }
+            >i {
+                display: inline-block;
+                vertical-align: top;
+                height: 100%;
+                width: 32px;
+            }
+            >span {
+                @include msg-position;
+                margin-left: -11px;
+            }
+        }
+        >._user {
+            position: relative;
+            cursor: default;
+            &:hover {
+                background-color: $hover-bg;
+            }
+            >img {
+                $size: 22px;
+                vertical-align: top;
+                position: relative;
+                top: $h/2 - $size/2;
+                height: $size;
+                width: $size;
+                border-radius: 50%;
+                margin-right: 5px;
+            }
+            >img+span {
+                display: inline-block;
+                vertical-align: top;
+                max-width: 100px;
+                font-size: 12px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            >img+span+span {
+                @include msg-position;
+            }
+        }
+        >._help {
+            width: 32px;
+        }
+    }
+}

@@ -1,0 +1,57 @@
+<div class="m-spaAside">
+    <div class="_foldBtn" title="折叠/展开"></div>
+    <ul>
+    <li data-module="home" hidden><div class="_home"><span class="_text">首页</span></div></li>
+    [[ menu.forEach(function(el){ ]]
+        [[ var _attrClass = (el.children ? '_hassub' : '') + (opens.indexOf(el.id) > -1 ? ' _open' : '') ]]
+        [[ _attrClass = _attrClass.trim() ? 'class="' + _attrClass +'"' : '' ]]
+        [[ var _attrData = el.module ? ('data-module="' + el.module + '"') : '' ]]
+        <li {{_attrClass}}>
+            <div {{_attrData}}>
+                <span class="_text">{{el.name}}</span>
+                {{ el.children ? '<i></i>' : ''}}
+            </div>
+
+
+
+            [[ if(el.children){ ]]
+                <ul>
+                [[ el.children.forEach(function(el){ ]]
+                    [[ var _attrClass = (el.children ? '_hassub' : '') + (opens.indexOf(el.id) > -1 ? ' _open' : '') ]]
+                    [[ _attrClass = _attrClass.trim() ? 'class="' + _attrClass +'"' : '' ]]
+                    [[ var _attrData = el.module ? ('data-module="' + el.module + '"') : '' ]]
+                        <li {{_attrClass}}>
+                            <div {{_attrData}}>
+                                <span class="_text">{{el.name}}</span>
+                                {{ el.children ? '<i></i>' : ''}}
+                            </div>
+
+
+
+                            [[ if(el.children){ ]]
+                                <ul>
+                                [[ el.children.forEach(function(el){ ]]
+                                    [[ var _attrData = el.module ? ('data-module="' + el.module + '"') : '' ]]
+                                        <li>
+                                            <div {{_attrData}}>
+                                                <span class="_text">{{el.name}}</span>
+                                                {{ el.children ? '<i></i>' : ''}}
+                                            </div>
+                                        </li>
+                                [[ }) ]]
+                                </ul>
+                            [[ } ]]
+                            
+
+
+                        </li>
+                [[ }) ]]
+                </ul>
+            [[ } ]]
+
+
+
+        </li>
+    [[ }) ]]
+    </ul>
+</div>
