@@ -1,4 +1,6 @@
 $height:85px;
+$fontsize:15px;
+$color:silver;
 .m-header-fixed {
     height: $height;
     >.m-header {
@@ -12,6 +14,7 @@ $height:85px;
         box-shadow: 0 0 5px silver;
         background-color: #fff;
         opacity: 0.8;
+        filter: alpha(opacity=0.8);
         >.container {
             white-space: nowrap;
             line-height: $height;
@@ -30,8 +33,8 @@ $height:85px;
                         display: inline-block;
                         width: 100px;
                         >a {
-                            font-size: 15px;
-                            color: silver;
+                            font-size: $fontsize;
+                            color: $color;
                         }
                     }
                 }
@@ -39,29 +42,41 @@ $height:85px;
             >.floader {
                 width: 60px;
                 height: $height;
-                float: right;
-                >.dropdownmenu {
-                	width: 50px;
-                	height:50px;
-                	border: 1px solid silver;
-                	background-color: silver;
-                	position: relative;
-                	padding: 5px 0px;
-                    >ul {
-                        position: absolute;
-                        top: $height;
-                        left: 0;
-                        >li {
-                            width: 100px;
-                            height: 30px;
-                            >a {
-                                font-size: 15px;
-                                color: black;
-                            }
-                        }
+                float: left;
+                display: block;
+                margin-left: 50px;
+                >span {
+                    display: block;
+                    width: 40px;
+                    height: 40px;
+                    border: 1px solid silver;
+                    margin-top: 17px;
+                    position: relative;
+                    line-height: 40px;
+                    text-align: center;
+                    text-decoration: none;
+                    border-radius: 10px;
+                    box-shadow: 0 0 5px silver;
+                    cursor:pointer;
+                    &::before {
+                        content: '≡';
+                        font-size: 28px;
+                        color: #777;
                     }
                 }
             }
         }
     }
+}
+.hidden-menus{
+        width:100%;
+        display:none;
+        >ul{
+            padding:10px;
+            >li{
+                line-height:35px;
+                font-size:$fontsize;
+                color:$color;
+            }
+        }
 }

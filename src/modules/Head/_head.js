@@ -17,15 +17,25 @@ module.exports.prototype.init = (function(){
     var setSelectors = function($box){
     	return {
              $selector:$box,
-  			 $menu:$box.find('.m-head-menu')
+  			 $menu:$box.find('.m-head-menu'),
+             $folder:$box.find('.floader'),
+             $hiddenMenus:$box.find('.hidden-menus')
     	};
     };
 
     var resizeAction = function(instance){
          // var target = [];
 
-         //      var $offs = instance.selector.$menu.offset().top + instance.selector.$menu.height()/2;
-         //      var $tabs_a = instance.selector.$menu.find('>a');
+              // var $offs = instance.selector.$menu.offset().top + instance.selector.$menu.height()/2;
+              // var $tabs_ul = instance.selector.$menu.find('>ul');
+              // if($offs > 85){
+              //       instance.selector.$folder.show();
+              //       instance.selector.$menu.hide();
+              // }else{
+              //       instance.selector.$folder.hide();
+              //       instance.selector.$menu.show();
+              // }
+
          //      var $overflow_ul = $overflow.find('>ul');
          //      $overflow_ul.find('>li').appendTo($tabs_ul);
          //      $.each($tabs_ul.find('>li').toArray().reverse(),function(index, el) {
@@ -52,12 +62,16 @@ module.exports.prototype.init = (function(){
     	 options = setOptions(options);
     	 this.selector = setSelectors($(template(options.data)));
          var that = this;
-         // $(function(){
-         //    resizeAction(that);
-         // });
-         // $(window).resize(function(){
-         //      resizeAction(that);
-         // });
+         $(function(){
+            resizeAction(that);
+         });
+         $(window).resize(function(){
+              resizeAction(that);
+         });
+         this.selector.$folder.onClick = function(){
+               //that.selector.$hiddenMenus.toggle();
+               $.messager.alert('www');
+         };
        
     	 this.selector.$selector.appendTo(options.el);
     	 return this;
