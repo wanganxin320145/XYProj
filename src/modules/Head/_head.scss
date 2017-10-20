@@ -1,6 +1,6 @@
 $height:85px;
 $fontsize:15px;
-$color:silver;
+$color:#777;
 .m-header-fixed {
     height: $height;
     >.m-header {
@@ -16,34 +16,39 @@ $color:silver;
         opacity: 0.8;
         filter: alpha(opacity=0.8);
         >.container {
-            white-space: nowrap;
+            //border: 1px solid silver;
             line-height: $height;
             >.m-head-logo {
                 max-width: 130px;
                 height: $height;
                 line-height: $height;
                 float: left;
+                //border: 1px solid green;
             }
             >.m-head-menu {
-                float: right;
+                float: left;
                 line-height: $height;
-                display: none;
+                height: $height;
+                text-align: right;
+                width:calc(100% - 130px);
+                min-width: 500px;
+                //border: 1px solid red;
                 >ul {
+                    //border:1px solid silver;
+                    width: 100%;
                     >li {
                         display: inline-block;
-                        width: 100px;
-                        >a {
-                            font-size: $fontsize;
-                            color: $color;
-                        }
+                        width: 120px;
+                        font-size: $fontsize;
+                        color: $color;
                     }
                 }
             }
             >.floader {
                 width: 60px;
                 height: $height;
-                float: left;
-                display: block;
+                float: right;
+                display: none;
                 margin-left: 50px;
                 >span {
                     display: block;
@@ -57,7 +62,7 @@ $color:silver;
                     text-decoration: none;
                     border-radius: 10px;
                     box-shadow: 0 0 5px silver;
-                    cursor:pointer;
+                    cursor: pointer;
                     &::before {
                         content: '≡';
                         font-size: 28px;
@@ -68,15 +73,16 @@ $color:silver;
         }
     }
 }
-.hidden-menus{
-        width:100%;
-        display:none;
-        >ul{
-            padding:10px;
-            >li{
-                line-height:35px;
-                font-size:$fontsize;
-                color:$color;
-            }
+
+.hidden-menus {
+    width: 100%;
+    display: none;
+    >ul {
+        padding: 10px;
+        >li {
+            line-height: 35px;
+            font-size: $fontsize;
+            color: $color;
         }
+    }
 }

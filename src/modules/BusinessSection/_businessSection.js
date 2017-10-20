@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = Module._createSub('footer');
+module.exports = Module._createSub('businessSection');
 module.exports.prototype.init = (function() {
     var setOptions = (function() {
         var params = {
@@ -16,18 +16,23 @@ module.exports.prototype.init = (function() {
     var setSelectors = function($box) {
         return {
             $selector: $box,
-            $container: $box.find('.container')
+            $container: $box.find('.container'),
+            $cardItem:$box.find('.card-area')
         };
     };
 
-    require('./_footer.scss');
-    var template = require('./_footer.ejs');
+    require('./_businessSection.scss');
+    var template = require('./_businessSection.ejs');
 
 
     return function(options) {
         options = setOptions(options);
         this.selector = setSelectors($(template(options.data)));
         var that = this;
+        this.selector.$cardItem.on('mouseover','>.card-item',function(){
+                $(this).addClass('card-active');
+                $(this).siblings().removeClass('card-active');
+        });
         this.selector.$selector.appendTo(options.el);
         return this;
     };

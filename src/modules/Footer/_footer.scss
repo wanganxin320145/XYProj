@@ -1,4 +1,4 @@
-.m-footer {
+.m-footer {    
     height: 240px;
     background-color: #363636;
     color:#fff;
@@ -12,20 +12,47 @@
                 margin-bottom: 40px;
                 padding-left: 1em;
                 border-left: 2px solid #c1c1c1;
+
                 >.footer-list {
-                	padding-top:10px;
+                	padding-top:5px;
                     >ul {
                         margin: 25px 0 0 0;
                         list-style: none;
                         >li {
                             display: list-item;
                             line-height: 2.5em;
+                            cursor: pointer;
                         }
                     }
-                    >img{
-                    	max-width: 130px;
+                }
+                >.footer-watch{
+                     >img{
+                        max-width: 130px;
+                        text-align: center;
+                        cursor: pointer;
+                    }
+                    >p{
+                        margin-top:5px;
+                        cursor: pointer;
+                        font-size:13px;
                     }
                 }
+                >.footer-contact{
+                    img{
+                        max-width: 35px;
+                        cursor: pointer;
+                    }
+                    h2{
+                        display: block;
+                        color: #ffffff;
+                        margin:0;
+                        line-height: 52px;
+                        cursor: pointer;
+                    }
+                }
+            }
+            >.footer-item:nth-child(5){
+                border-right: 2px solid #c1c1c1;
             }
         }
     }

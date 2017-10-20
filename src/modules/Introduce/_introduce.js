@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = Module._createSub('footer');
+module.exports = Module._createSub('introduce');
 module.exports.prototype.init = (function() {
     var setOptions = (function() {
         var params = {
@@ -20,8 +20,8 @@ module.exports.prototype.init = (function() {
         };
     };
 
-    require('./_footer.scss');
-    var template = require('./_footer.ejs');
+    require('./_introduce.scss');
+    var template = require('./_introduce.ejs');
 
 
     return function(options) {
