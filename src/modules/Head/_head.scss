@@ -1,5 +1,5 @@
-$height:85px;
-$fontsize:15px;
+$height:80px;
+$fontsize:16px;
 $color:#777;
 .m-header-fixed {
     height: $height;
@@ -13,8 +13,8 @@ $color:#777;
         border-bottom: 2px solid #0bA1E4;
         box-shadow: 0 0 5px silver;
         background-color: #fff;
-        opacity: 0.8;
-        filter: alpha(opacity=0.8);
+        opacity: .9;
+        filter: alpha(opacity=.9);
         >.container {
             //border: 1px solid silver;
             line-height: $height;
@@ -26,28 +26,51 @@ $color:#777;
                 //border: 1px solid green;
             }
             >.m-head-menu {
-                float: left;
-                line-height: $height;
+                float: right;
+                //line-height: $height;
                 height: $height;
-                text-align: right;
                 width:calc(100% - 130px);
                 min-width: 500px;
                 //border: 1px solid red;
                 >ul {
                     //border:1px solid silver;
-                    width: 100%;
+                    margin:0 auto;
+                    overflow:hidden;
+                    text-align:right;
+                    padding-left:215px;
                     >li {
-                        display: inline-block;
-                        width: 120px;
+                        display: block;
+                        float:left;
                         font-size: $fontsize;
                         color: $color;
+                        text-align:center;
+                        //position:relative;
+                        height:$height;
+                        >a{
+                            display:block;
+                            height:30px;
+                            padding:0px 20px;
+                            &:hover{
+                                color:#0ba1e4;
+                            }
+                        }
+                        >.line-top{
+                            border-bottom:1px solid #0ba1e4;
+                            width:18px;
+                            margin:0 auto;
+                            display:block;
+                            height:30px;
+                        }
+                    }
+                    >.menu-active{
+                        color:#0ba1e4;
                     }
                 }
             }
             >.floader {
                 width: 60px;
                 height: $height;
-                float: right;
+                float: left;
                 display: none;
                 margin-left: 50px;
                 >span {

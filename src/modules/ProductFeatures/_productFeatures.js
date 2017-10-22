@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = Module._createSub('picScroll');
+module.exports = Module._createSub('productFeatures');
 module.exports.prototype.init = (function() {
     var setOptions = (function() {
         var params = {
@@ -20,8 +20,8 @@ module.exports.prototype.init = (function() {
         };
     };
 
-    require('./_picScroll.scss');
-    var template = require('./_picScroll.ejs');
+    require('./_productFeatures.scss');
+    var template = require('./_productFeatures.ejs');
 
 
     return function(options) {

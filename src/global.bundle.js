@@ -1,7 +1,9 @@
 'use strict';
 
 //styles
+
 require('./global/styles/styles.scss');
+
 
 
 

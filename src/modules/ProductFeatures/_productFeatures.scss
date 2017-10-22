@@ -1,0 +1,115 @@
+.m-product-features{
+	>.container{
+		//border:1px solid red;
+		>.product-header{
+			width:100%;
+			padding-top:5px;
+			>.circle{
+				text-align:center;
+				border:2px solid black;
+				width:220px;
+				margin:0 auto;
+				border-radius:50%;
+				padding:20px;
+				>i{
+					font-size:68px;	
+				}
+				
+			}
+		}
+		>.product-content{
+			>ul{
+				width:100%;
+				>li{
+					display:inline-block;
+					//vertical-align:;
+					border:1px solid silver;
+					vertical-align:middle;
+				}
+				>li:nth-child(1){
+					width:325px;
+					>ul{
+
+						>li{
+							width:100%;
+							
+							>ul{
+								width:100%;
+								padding:30px 2px;
+								>li{
+									display:inline-block;
+									text-align:right;
+									vertical-align:middle;
+									>p{
+										text-align:left;
+									}
+								}
+								>li:nth-child(1){
+									width:calc(100% - 95px);
+								}
+								>li:nth-child(2){
+									width:90px;
+									>span{
+										height:80px;
+										width:80px;
+										margin:0 auto;
+										display:block;
+										text-align:center;
+										border:1px solid silver;
+										border-radius:50%;
+										>i{
+											padding-top:18px;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				>li:nth-child(2){
+					width:280px;
+				}
+				>li:nth-child(3){
+					width:325px;
+					>ul{
+						>li{
+							
+							>ul{
+								width:100%;
+								padding:30px 2px;
+								>li{
+									display:inline-block;
+									text-align:left;
+									vertical-align:middle;
+									>p{
+										text-align:left;
+									}
+								}
+								>li:nth-child(1){
+									width:90px;
+									>span{
+										height:80px;
+										width:80px;
+										margin:0 auto;
+										display:block;
+										text-align:center;
+										border:1px solid silver;
+										border-radius:50%;
+										>i{
+											padding-top:18px;
+										}
+									}
+
+								}
+								>li:nth-child(2){
+									width:calc(100% - 70px);
+									
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,20 +1,29 @@
 body {
-     font-family: Tahoma, Helvetica, Arial, sans-serif;
-    // word-wrap: break-word;
+     //font-family:Microsoft YaHei,Tahoma, Helvetica, Arial, sans-serif;
+    word-wrap: break-word;
+    font-family:Microsoft YaHei,Arial,Tahoma, Helvetica;
 }
 *{
     padding: 0px;
     margin: 0px;
 }
-ul{
+ul,li{
 	list-style-type: none;
 	list-style:none;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6{
-	font-weight: 300;
+//h1,
+//h2,
+//h3,
+//h4,
+//h5,
+//h6{
+//	font-weight: 300;
+//}
+
+a,
+a:link,
+a:active,
+a:visited {
+    color: inherit;
+    text-decoration: none;
 }

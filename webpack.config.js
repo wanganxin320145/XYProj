@@ -128,9 +128,8 @@ module.exports = function(env) {
                 {
                     test: /\.(eot|svg|ttf|woff|woff2)\w*/,
                     use:[{
-                        loader: 'file-loader?publicPath=/static/res/&outputPath=font/'    
-                    }],
-                    exclude: [path.join(__dirname, './node_modules'), path.join(__dirname, './src/plugins')]
+                        loader: 'file-loader'
+                    }]
                 }
 
             ]

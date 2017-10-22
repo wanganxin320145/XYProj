@@ -14,6 +14,12 @@
                     text-align: center;
                     margin-bottom: 30px;
                 }
+                >span{
+                    display:block;
+                    width:100px;
+                    margin:0 auto;
+                    border-top:2px solid #0ba1e4;
+                }
             }
             >.card-box {
                 padding-top: 20px;
@@ -39,6 +45,10 @@
                             >h4{
                             	font-weight: bold;
                             }
+                            >i{
+                                color:#0ba1e4;
+                            }
+
                         }
                         >.card-content {
                             padding-top: 20px;
@@ -69,8 +79,46 @@
                             }
                         }
                     }
+                    >.card-item:nth-child(1){
+                        >.card-title{
+                            >span{
+                                &::before{
+                                    content:'$';
+                                }
+                            }
+                        }
+                    }
+                    >.card-item:nth-child(2){
+                        >.card-title{
+                            >span{
+                                &::before{
+                                    content:'$';
+                                }
+                            }
+                        }
+                    }
+                    >.card-item:nth-child(3){
+                        >.card-title{
+                            >span{
+                                &::before{
+                                    content:'$';
+                                }
+                            }
+                        }
+                    }
+                    >.card-item:nth-child(4){
+                        >.card-title{
+                            >span{
+                                &::before{
+                                    content:'$';
+                                }
+                            }
+                        }
+                    }
+
                     >.card-active {
                         @include cardActive();
+                        transform: scale(1.1, 1.1);
                         >.card-content {
                             >.btn {
                                 background-color: #0ba1e4;
@@ -80,7 +128,26 @@
                         }
                         >.card-title {
                                 border-bottom: 1px solid #ffffff;
-                            }
+                                >i{
+                                    color:#fff;
+                                    padding-bottom:20px;
+                                }
+                        }
+
+                    }
+                }
+            }
+            >.text-center{
+                >.btn{
+                    color: #0ba1e4;
+                    background: transparent;
+                    border-color: #0ba1e4;
+                    transition: all 0.3s ease-in-out;
+                    padding:10px 20px;
+                    &:hover {
+                        color: #fff;
+                        background:#0ba1e4 ;
+                        border-color: #0ba1e4;
                     }
                 }
             }

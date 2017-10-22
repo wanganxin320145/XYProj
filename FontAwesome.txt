@@ -1,0 +1,14 @@
+npm install font-awesome-webpack less less-loader css-loader style-loader file-loader font-awesome
+
+
+ module: {
+        loaders: [
+            {
+                test: /\.(eot|svg|ttf|woff|woff2|png)\w*/,
+                loader: 'file'
+            }
+        ]
+    }
+
+入口文件引入(entry.js)：
+require('font-awesome-webpack');
