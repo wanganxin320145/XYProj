@@ -1,6 +1,7 @@
 .m-product-features {
     >.container {
         //border:1px solid red;
+        padding-bottom: 50px;
         >.product-header {
             width: 100%;
             padding-top: 5px;
@@ -13,24 +14,32 @@
                 padding: 20px;
                 >i {
                     font-size: 68px;
+                    color: black;
+                }
+                >p{
+                    color: #808080;
                 }
             }
         }
         >.product-content {
+            //border: 1px solid red;
             >ul {
                 width: 100%;
+                text-align: center;;
                 >li {
                     display: inline-block;
-                    border: 1px solid silver;
+                    //border: 1px solid silver;
                     vertical-align: middle;
                 }
                 >li:nth-child(1) {
-                    width: 325px;
+                    width: 420px;
                     >ul {
 
                         >li {
                             width: 100%;
-
+                            p{
+                                color:#A9A9A9;
+                            }
                             >ul {
                                 width: 100%;
                                 //padding: 40px 2px 20px 2px;
@@ -44,20 +53,26 @@
                                     }
                                 }
                                 >li:nth-child(1) {
-                                    width: calc(100% - 95px);
+                                    width: calc(100% - 120px);
                                 }
                                 >li:nth-child(2) {
-                                    width: 90px;
+                                    width: 115px;
                                     >span {
-                                        height: 80px;
-                                        width: 80px;
+                                        height: 90px;
+                                        width: 90px;
                                         margin: 0 auto;
                                         display: block;
                                         text-align: center;
-                                        border: 1px solid silver;
                                         border-radius: 50%;
+                                        background-color: #E1E1E2;
                                         >i {
-                                            padding-top: 18px;
+                                            padding-top: 25px;
+                                        }
+                                        &:hover{
+                                            background-color: #0ba1e4;
+                                            >i{
+                                                color: #fff;
+                                            }
                                         }
                                     }
                                 }
@@ -66,19 +81,19 @@
                         >li:nth-child(1) {
                         	padding-top:20px;
                             .icon-product {
-                                margin-top: 10px;
+                                margin-top: 5px;
                             }
                         }
                         >li:nth-child(2) {
-                        	padding-top: 100px;
-                        	padding-bottom:70px;
+                        	padding-top: 90px;
+                        	padding-bottom:60px;
                             .icon-product {
-                                margin-top: 25px;
+                                margin-top: 10px;
                             }
                         }
                         >li:nth-child(3) {
                             .icon-product {
-                                margin-top: 25px;
+                                margin-top: 10px;
                             }
                         }
                     }
@@ -87,10 +102,13 @@
                     width: 280px;
                 }
                 >li:nth-child(3) {
-                    width: 325px;
+                    width: 420px;
                     >ul {
                         >li {
                             width: 100%;
+                            p{
+                                color:#A9A9A9;
+                            }
                             >ul {
                                 width: 100%;
                                 >li {
@@ -102,40 +120,50 @@
                                     }
                                 }
                                 >li:nth-child(1) {
-                                    width: 90px;
+                                    width: 110px;
                                     >span {
-                                        height: 80px;
-                                        width: 80px;
+                                        height: 90px;
+                                        width: 90px;
                                         margin: 0 auto;
                                         display: block;
                                         text-align: center;
-                                        border: 1px solid silver;
                                         border-radius: 50%;
+                                        background-color: #E1E1E2;
                                         >i {
-                                            padding-top: 18px;
+                                            padding-top: 25px;
+                                        }
+                                        &:hover{
+                                            background-color: #0ba1e4;
+                                            >i{
+                                                color: #fff;
+                                            }
                                         }
                                     }
                                 }
                                 >li:nth-child(2) {
-                                    width: calc(100% - 95px);
+                                    width: calc(100% - 120px);
                                 }
                             }
                         }
                         >li:nth-child(1) {
+                            padding-top:32px;
+                            padding-bottom:23px;
                             .icon-product {
-                                margin-top: 30px;
+                                margin-top: 8px;
                             }
                         }
                         >li:nth-child(2) {
-                        	padding-top:95px;
-                        	padding-bottom:95px;
+                        	padding-top: 45px;
+                            padding-bottom:55px;
                             .icon-product {
-                                margin-top: 40px;
+                                margin-top: 10px;
                             }
                         }
                         >li:nth-child(3) {
+                            padding-bottom: 20px;
+                            padding-top: 35px;
                             .icon-product {
-                                margin-top: 20px;
+                                margin-top: 10px;
                             }
                         }
                     }

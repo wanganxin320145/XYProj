@@ -39,8 +39,8 @@ $color:#777;
                     text-align:right;
                     padding-left:215px;
                     >li {
-                        display: block;
-                        float:left;
+                        display: inline-block;
+                        //float:left;
                         font-size: $fontsize;
                         color: $color;
                         text-align:center;

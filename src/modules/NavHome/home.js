@@ -17,6 +17,16 @@ module.exports = function(options) {
         data: { }
     });
 
+    var m_serviceCenter = require('../ServiceCenter/_serviceCenter.js')().init({
+        el: main_selector,
+        data: { }
+    });
+
+    var m_teamSupport = require('../TeamSupport/_teamSupport.js')().init({
+        el: main_selector,
+        data: { }
+    });
+
      var m_introduce = require('../Introduce/_introduce.js')().init({
         el: main_selector,
         data: { }

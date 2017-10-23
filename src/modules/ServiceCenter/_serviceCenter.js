@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = Module._createSub('businessSection');
+module.exports = Module._createSub('serviceCenter');
 module.exports.prototype.init = (function() {
     var setOptions = (function() {
         var params = {
@@ -16,23 +16,18 @@ module.exports.prototype.init = (function() {
     var setSelectors = function($box) {
         return {
             $selector: $box,
-            $container: $box.find('.container'),
-            $cardItem:$box.find('.card-area>.row>.col-md-3')
+            $container: $box.find('.container')
         };
     };
 
-    require('./_businessSection.scss');
-    var template = require('./_businessSection.ejs');
+    require('./_serviceCenter.scss');
+    var template = require('./_serviceCenter.ejs');
 
 
     return function(options) {
         options = setOptions(options);
         this.selector = setSelectors($(template(options.data)));
         var that = this;
-        this.selector.$cardItem.on('mouseover','>.card-item',function(){
-                $(this).addClass('card-active');
-                $(this).parent().siblings().find('.card-item').removeClass('card-active');
-        });
         this.selector.$selector.appendTo(options.el);
         return this;
     };

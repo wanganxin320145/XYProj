@@ -36,16 +36,16 @@ module.exports.prototype.init = (function() {
         }
 
         instance.selector.$menu.show();
-        var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth; 
-        var menuWidth = instance.selector.$menu.width();
-        //var $offs = instance.selector.$menu.offset();
+        //var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth; 
+        //var menuWidth = instance.selector.$menu.width();
+        var $offs = instance.selector.$menu.offset();
         var flag = false;
-        // if ($offs.top >= instance.selector.$menu.height() / 2) {
-        //     flag = true;
-        // }
-        if(width < menuWidth){
+        if ($offs.top >= instance.selector.$menu.height() / 2) {
             flag = true;
         }
+        // if(width < menuWidth){
+        //     flag = true;
+        // }
         if (flag) {
             $tabs_ul.appendTo(instance.selector.$hiddenMenus);
             instance.selector.$folder.show();

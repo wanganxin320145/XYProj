@@ -1,0 +1,25 @@
+.m-team-support{
+    >.container{
+        padding-top: 30px;
+        >.row{
+            >.col-md-12{
+                text-align: center;
+                h2{
+                    margin-bottom: 30px;
+                }
+                >p{
+                    padding-top: 30px;
+                }
+            }
+            >.col-md-3{
+                text-align: center;
+                >h4{
+                    padding:20px 0px;
+                }
+                >p{
+                    color:#818181;
+                }
+            }
+        }
+    }
+}
