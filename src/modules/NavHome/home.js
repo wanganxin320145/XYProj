@@ -27,6 +27,11 @@ module.exports = function(options) {
         data: { }
     });
 
+    var m_cooperativePartner = require('../CooperativePartner/_cooperativePartner.js')().init({
+        el: main_selector,
+        data: { }
+    });
+
      var m_introduce = require('../Introduce/_introduce.js')().init({
         el: main_selector,
         data: { }
