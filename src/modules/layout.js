@@ -25,4 +25,9 @@ module.exports = function(options) {
         el_main:$main,
         data: { }
     });
+    var m_version = require('./Version/_version.js')().init({
+        el: $footer,
+        el_main:$main,
+        data: { }
+    });
 };

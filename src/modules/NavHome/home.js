@@ -32,12 +32,12 @@ module.exports = function(options) {
         data: { }
     });
 
-     var m_introduce = require('../Introduce/_introduce.js')().init({
+    var m_businessSection = require('../BusinessSection/_businessSection.js')().init({
         el: main_selector,
         data: { }
     });
 
-    var m_businessSection = require('../BusinessSection/_businessSection.js')().init({
+    var m_introduce = require('../Introduce/_introduce.js')().init({
         el: main_selector,
         data: { }
     });
