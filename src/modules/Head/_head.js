@@ -21,35 +21,26 @@ module.exports.prototype.init = (function() {
             $container: $box.find('.container'),
             $logo: $box.find('.m-head-logo'),
             $menu: $box.find('.m-head-menu'),
+            $colmd9:$box.find('.col-md-9'),
             $folder: $box.find('.floader'),
             $hiddenMenus: $box.find('.hidden-menus')
         };
     };
 
     var resizeHanding = function(instance) {
-        // var target = [];
         var $tabs_ul = instance.selector.$menu.find('>ul');
-        var $hidden_ul = instance.selector.$hiddenMenus.find('>ul');
         instance.selector.$header.css('position','fixed');
-        if ($hidden_ul.length != 0) {
-            $hidden_ul.appendTo(instance.selector.$menu);
-        }
 
-        instance.selector.$menu.show();
-        //var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth; 
-        //var menuWidth = instance.selector.$menu.width();
-        var $offs = instance.selector.$menu.offset();
+        instance.selector.$colmd9.show();
+        //var $offs = instance.selector.$colmd9.offset();
+        var $offs = $tabs_ul.find('>li:nth-child(6)').offset();
         var flag = false;
-        if ($offs.top >= instance.selector.$menu.height() / 2) {
+        if ($offs.top >= instance.selector.$colmd9.height() / 2) {
             flag = true;
         }
-        // if(width < menuWidth){
-        //     flag = true;
-        // }
         if (flag) {
-            $tabs_ul.appendTo(instance.selector.$hiddenMenus);
             instance.selector.$folder.show();
-            instance.selector.$menu.hide();
+            instance.selector.$colmd9.hide();
             instance.selector.$header.css('position','relative');
         } else {
             instance.selector.$folder.hide();
@@ -79,6 +70,9 @@ module.exports.prototype.init = (function() {
             });
             $(that.selector.$folder[0]).on('click', 'span:nth-child(1)', function() {
                 that.selector.$hiddenMenus.slideToggle();
+            });
+            that.selector.$selector.on('click','>.hidden-menus',function(){
+                 $(this).slideUp();
             });
         });
 
