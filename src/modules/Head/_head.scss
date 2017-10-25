@@ -22,48 +22,43 @@ $color:#777;
                 max-width: 130px;
                 height: $height;
                 line-height: $height;
-                float: left;
-                //border: 1px solid green;
+                float: left; //border: 1px solid green;
             }
             >.m-head-menu {
-                float: right;
-                //line-height: $height;
+                float: right; //line-height: $height;
                 height: $height;
-                width:calc(100% - 130px);
-                min-width: 500px;
-                //border: 1px solid red;
+                width: calc(100% - 130px);
+                min-width: 500px; //border: 1px solid red;
                 >ul {
                     //border:1px solid silver;
-                    margin:0 auto;
-                    overflow:hidden;
-                    text-align:right;
-                    padding-left:215px;
+                    margin: 0 auto;
+                    overflow: hidden;
+                    text-align: right;
+                    padding-left: 215px;
                     >li {
-                        display: inline-block;
-                        //float:left;
+                        display: inline-block; //float:left;
                         font-size: $fontsize;
                         color: $color;
-                        text-align:center;
-                        //position:relative;
-                        height:$height;
-                        >a{
-                            display:block;
-                            height:30px;
-                            padding:0px 20px;
-                            &:hover{
-                                color:#0ba1e4;
+                        text-align: center; //position:relative;
+                        height: $height;
+                        >a {
+                            display: block;
+                            height: 30px;
+                            padding: 0px 20px;
+                            &:hover {
+                                color: #0ba1e4;
                             }
                         }
-                        >.line-top{
-                            border-bottom:1px solid #0ba1e4;
-                            width:18px;
-                            margin:0 auto;
-                            display:block;
-                            height:30px;
+                        >.line-top {
+                            border-bottom: 1px solid #0ba1e4;
+                            width: 18px;
+                            margin: 0 auto;
+                            display: block;
+                            height: 30px;
                         }
                     }
-                    >.menu-active{
-                        color:#0ba1e4;
+                    >.menu-active {
+                        color: #0ba1e4;
                     }
                 }
             }
@@ -106,6 +101,14 @@ $color:#777;
             line-height: 35px;
             font-size: $fontsize;
             color: $color;
+            >a {
+                display: block;
+                height: 30px;
+                padding: 0px 20px;
+                &:hover {
+                    color: #0ba1e4;
+                }
+            }
         }
     }
 }

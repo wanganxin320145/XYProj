@@ -38,15 +38,16 @@
                         border-radius: 50%;
                         padding-top: 10px;
                         cursor: pointer;
-                        &:hover {
-                            animation: serverRotate 0.6s;
-                            animation-iteration-count: 1;
-                        }
+                        
                     }
                     >p {
                         padding-top: 5px;
                         font-size: 20px;
                         color: #DAA520;
+                    }
+                    .icon-active{
+                            animation: serverRotate 0.6s;
+                            animation-iteration-count: 1;
                     }
                     @keyframes serverRotate {
                         0% {

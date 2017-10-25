@@ -16,7 +16,8 @@ module.exports.prototype.init = (function() {
     var setSelectors = function($box) {
         return {
             $selector: $box,
-            $container: $box.find('.container')
+            $container: $box.find('.container'),
+            $circleContent:$box.find('.circle-content')
         };
     };
 
@@ -28,6 +29,10 @@ module.exports.prototype.init = (function() {
         options = setOptions(options);
         this.selector = setSelectors($(template(options.data)));
         var that = this;
+        this.selector.$circleContent.on('mouseover','>.circle-transform',function(){
+                $(this).toggleClass('circle-active');
+                //$(this).parent().siblings().find('.card-item').removeClass('card-active');
+        });
         this.selector.$selector.appendTo(options.el);
         return this;
     };

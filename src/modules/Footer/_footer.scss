@@ -1,5 +1,5 @@
 .m-footer {    
-    height: 240px;
+    //height: 240px;
     background-color: #363636;
     color:#fff;
     margin: 0px;
@@ -26,14 +26,14 @@
                     }
                 }
                 >.footer-watch{
+                    text-align:center;
+                    cursor: pointer;
                      >img{
                         max-width: 130px;
-                        text-align: center;
-                        cursor: pointer;
                     }
                     >p{
                         margin-top:5px;
-                        cursor: pointer;
+                        
                         font-size:13px;
                     }
                 }
@@ -41,6 +41,7 @@
                     img{
                         max-width: 35px;
                         cursor: pointer;
+                        margin-right:10px;
                     }
                     h2{
                         display: block;
