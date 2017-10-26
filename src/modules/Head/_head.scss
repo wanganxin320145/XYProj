@@ -18,9 +18,12 @@ $color:#777;
         >.container {
             //border: 1px solid silver;
             line-height: $height;
+
             >.row {
+
                 >.col-md-3 {
                     overflow: hidden;
+
                     >.m-head-logo {
                         max-width: 130px;
                         height: $height;
@@ -64,7 +67,9 @@ $color:#777;
                             overflow: hidden;
                             text-align: right;
                             padding-left: 215px;
+                            white-space:nowrap;
                             >li {
+
                                 display: inline-block; //float:left;
                                 font-size: $fontsize;
                                 color: $color;

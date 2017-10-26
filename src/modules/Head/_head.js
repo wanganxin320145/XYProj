@@ -33,7 +33,7 @@ module.exports.prototype.init = (function() {
 
         instance.selector.$colmd9.show();
         //var $offs = instance.selector.$colmd9.offset();
-        var $offs = $tabs_ul.find('>li:nth-child(6)').offset();
+        var $offs = $tabs_ul.find('>li:nth-child(3)').offset();
         var flag = false;
         if ($offs.top >= instance.selector.$colmd9.height() / 2) {
             flag = true;

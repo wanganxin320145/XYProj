@@ -16,13 +16,14 @@ module.exports.prototype.init = (function() {
     var setSelectors = function($box) {
         return {
             $selector: $box,
-            $container: $box.find('.container')
+            $container: $box.find('.container'),
+            $picSummery: $box.find('.summary-content'),
+            $img:$box.find('.active')
         };
     };
 
     require('./_picScroll.scss');
     var template = require('./_picScroll.ejs');
-
 
     return function(options) {
         options = setOptions(options);
