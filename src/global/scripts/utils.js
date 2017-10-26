@@ -99,32 +99,42 @@ window.U = {};
     /*防抖器
         如：用户在搜索框输入关键词的过程中，需要恰当的时机去请求数据，用防抖器可以有效的控制请求时机
      */
-    U.debouncer = function(func, time, delay) {
-        time = time || 300; //默认300
-        delay = typeof delay === 'boolean' ? delay : true; //默认true
-        var id, run = true;
-        if (delay) {
-            return function() {
-                clearTimeout(id);
-                id = setTimeout(function(args) {
-                    func.apply(this, args);
-                }.bind(this, arguments), time);
-            };
-        } else {
-            return function() {
-                clearTimeout(id);
-                id = setTimeout(function() {
-                    run = true;
-                }, time);
-                if (run) {
-                    run = false;
-                    func.apply(this, arguments);
-                }
-            };
-        }
+    // U.debouncer = function(func, time, delay) {
+    //     time = time || 300; //默认300
+    //     delay = typeof delay === 'boolean' ? delay : true; //默认true
+    //     var id, run = true;
+    //     if (delay) {
+    //         return function() {
+    //             clearTimeout(id);
+    //             id = setTimeout(function(args) {
+    //                 func.apply(this, args);
+    //             }.bind(this, arguments), time);
+    //         };
+    //     } else {
+    //         return function() {
+    //             clearTimeout(id);
+    //             id = setTimeout(function() {
+    //                 run = true;
+    //             }, time);
+    //             if (run) {
+    //                 run = false;
+    //                 func.apply(this, arguments);
+    //             }
+    //         };
+    //     }
+    // };
+
+    U.debouncer = function(func, time) { //防抖动
+        var context, args, id;
+        return function() {
+            context = this;
+            args = arguments;
+            if (id) clearTimeout(id);
+            id = setTimeout(function() {
+                func.apply(context, args);
+            }, time);
+        };
     };
-
-
 
     /*样式渲染完成时机
         对于<style>直接标记为渲染完成
