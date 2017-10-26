@@ -12,6 +12,11 @@ module.exports = function(options) {
         data: { }
     });
 
+    var m_flashPlay = require('../FlashPlay/_flashPlay.js')().init({
+        el: main_selector,
+        data: { }
+    });
+
     var m_productFeatures = require('../ProductFeatures/_productFeatures.js')().init({
         el: main_selector,
         data: { }

@@ -59,7 +59,7 @@ module.exports.prototype.init = (function() {
 
         $(function() {
             $(window).resize(function() {
-                resizeHanding(that);
+                U.debouncer(resizeHanding(that));
             });
            
             that.selector.$menu.on('click','>ul>li',function(){

@@ -36,14 +36,15 @@
                     >.pic-summary-01{
                         >.summary-content{
                             position:absolute;
-                            width:45%;
-                            height:400px;
+                            width:47%;
+                            height:60%;
                             z-index:11;
-                            left:12%;
+                            left:11%;
                             top:70px;
                             color:#fff;
                             text-align:left;
                             padding: 20px 30px;
+                            overflow: hidden;
                             >h1{
                                 font-size:40px;
                                 padding-bottom: 10px;
@@ -72,7 +73,7 @@
                             height:200px;
                             z-index:11;
                             left:70%;
-                            top:150px;
+                            top:20%;
                             color:rgb(255,255,255);
                             text-align:center;
                             >.imgbox{
