@@ -61,12 +61,27 @@ module.exports.prototype.init = (function() {
             $(window).resize(function() {
                 U.debouncer(resizeHanding(that));
             });
-           
+            //var modules = [];
             that.selector.$menu.on('click','>ul>li',function(){
+                $(window.Modules).each(function(index,item){
+                    $('div[data-module="' + item + '"]').hide();      
+                });
+                
+                $('div[data-module="m-home"]').show();
                 $('<span class="line-top"></span>').appendTo($(this));
                 $(this).addClass('menu-active');
                 $(this).siblings().removeClass('menu-active');
                 $(this).siblings().find('span').remove();
+                var moduleName = $(this).data('module');
+                if(moduleName === "m-questions"){
+                    window.Modules.push(moduleName);
+                    $('div[data-module="m-home"]').hide();
+                    require('../Questions/questions.js')().init({
+                        el:main_selector,
+                        data:{}
+                    });
+                }
+
             });
             $(that.selector.$folder[0]).on('click', 'span:nth-child(1)', function() {
                 that.selector.$hiddenMenus.slideToggle();

@@ -6,6 +6,7 @@ module.exports = function(options) {
     };
     options = $.extend({}, defaults, options);
     var temp = require('./_layout.ejs');
+    require('./_layout.scss');
     var $box = $(temp()),
         $header = $box.find('.m-header-box'),
         $main = $box.find('.m-main-box'),
@@ -18,7 +19,17 @@ module.exports = function(options) {
         el_main:$main,
         data: { }
     });
-    require('./NavHome/home.js')({el:$main,el_main:$main,data:{}});
+
+    var m_picScroll = require('./PicScroll/_picScroll.js')().init({
+        el: $main,
+        data: { }
+    });
+
+    var m_home = require('./NavHome/home.js')().init({
+        el_main: $main,
+        data: { }
+    });
+    //require('./NavHome/home.js')({el:$main,el_main:$main,data:{}});
 
     var m_footer = require('./Footer/_footer.js')().init({
         el: $footer,

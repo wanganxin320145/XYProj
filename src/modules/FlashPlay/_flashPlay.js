@@ -16,7 +16,9 @@ module.exports.prototype.init = (function() {
     var setSelectors = function($box) {
         return {
             $selector: $box,
-            $container: $box.find('.container')
+            $container: $box.find('.container'),
+            $flashLeft:$box.find('.flash-left'),
+            $flashRight:$box.find('.flash-right')
         };
     };
 
@@ -27,6 +29,16 @@ module.exports.prototype.init = (function() {
         options = setOptions(options);
         this.selector = setSelectors($(template(options.data)));
         var that = this;
+        $(function(){
+            //  that.selector.$flashLeft.on('mouseover', '>div', function() {
+            //      $(this).addClass('flash-left-active');
+            //     $(this).siblings().removeClass('flash-left-active');
+            // });
+            //  that.selector.$flashRight.on('mouseover', '>div', function() {
+            //      $(this).addClass('flash-right-active');
+            //     $(this).siblings().removeClass('flash-right-active');
+            // });
+        });
         this.selector.$selector.appendTo(options.el);
         return this;
     };

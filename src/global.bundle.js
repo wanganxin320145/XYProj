@@ -1,12 +1,11 @@
 'use strict';
 
-//styles
+
+
+//global object
+window.Modules = [];
 
 require('./global/styles/styles.scss');
-
-
-
-
 //scripts
 require('./global/scripts/utils.js');
 require('./global/scripts/module.base.js');

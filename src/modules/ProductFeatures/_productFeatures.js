@@ -31,11 +31,14 @@ module.exports.prototype.init = (function() {
                 var bottomPositon = boxPosition.bottom;
                 var scrollTop = $(window).scrollTop();
 
-                if(topPositon > 0){
+                if(topPositon < 0){
+                    instance.selector.$iconContent.find('.leftPart').find('p').addClass('icon-active-left');
+                    instance.selector.$iconContent.find('.rightPart').find('p').addClass('icon-active-right');
+                }else if(bottomPositon > 200){
                     instance.selector.$iconContent.find('.leftPart').find('p').addClass('icon-active-left');
                     instance.selector.$iconContent.find('.rightPart').find('p').addClass('icon-active-right');
                 }
-                if(bottomPositon < 0 || scrollTop === 0){
+                if(bottomPositon < 0 || topPositon > 0){
                     instance.selector.$iconContent.find('.leftPart').find('p').removeClass('icon-active-left');
                     instance.selector.$iconContent.find('.rightPart').find('p').removeClass('icon-active-right');
                 }
