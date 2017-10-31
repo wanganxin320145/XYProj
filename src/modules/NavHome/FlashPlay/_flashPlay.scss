@@ -1,0 +1,167 @@
+$color:#fdc900;
+$backgroundColor:#333333;
+//$backgroundColor:#0ba1e4;
+.m-flash-play {
+    >.container {
+        padding-top: 30px;
+        padding-bottom: 50px;
+        >.row {
+            >.col-md-12 {
+                >h2 {
+                    text-align: center;
+                    margin-bottom: 30px;
+                }
+            }
+            >.col-md-3 {
+                padding: 0px;
+            }
+            p {
+                color: #A9A9A9;
+                cursor: pointer;
+            }
+            h4 {
+                text-align: center;
+                cursor: pointer;
+                color: #0ba1e4;
+                font-weight: bold;
+                >i {
+                    padding-right: 10px; //color:#0ba1e4;
+                }
+            }
+            >.flash-left {
+                //border:1px solid silver;
+                >div {
+                    padding: 10px 20px;
+                    padding-bottom: 12px;
+                    transition: all 0.3s ease-in-out;
+                    >p {
+                        transition: all 0.3s ease-in-out;
+                    }
+                    &:hover {
+                        background-color: $backgroundColor;
+                        position: relative;
+                        border-radius: 5px;
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            border: 10px solid transparent;
+                            border-left-color: $backgroundColor;
+                            right: -18px;
+                            top: 20px;
+                        }
+                        >p {
+                            transform: scale(1.02, 1.02);
+                            color: #fff;
+                        }
+                        >h4 {
+                            color: #fff;
+                            >i {
+                                color: #fff;
+                            }
+                        }
+                    }
+                } //                .flash-left-active {
+                //                    position: relative; //background-color: #5E5E5E;
+                //                    background-color: $backgroundColor;
+                //                    border-radius: 5px;
+                //                    transform: scale(1.02, 1.02);
+                //                    >::after {
+                //                        content: '';
+                //                        position: absolute;
+                //                        border: 10px solid transparent;
+                //                        border-left-color: $backgroundColor;
+                //                        right: -18px;
+                //                        top: 20px;
+                //                    }
+                //                    >h4 {
+                //                        //color: #fff;
+                //                        color: $color;
+                //                        >i {
+                //                            //color: #fff;
+                //                            color: $color;
+                //                        }
+                //                    }
+                //                    >p {
+                //                        color: $color;
+                //                    }
+                //                }
+            }
+
+
+            >.flash-right {
+                //border:1px solid silver;
+                >div {
+                    padding: 10px 20px;
+                    padding-bottom: 32px;
+                    transition: all 0.3s ease-in-out;
+                    >p {
+                        transition: all 0.3s ease-in-out;
+                    }
+                    &:hover {
+                        background-color: $backgroundColor;
+                        position: relative;
+                        border-radius: 5px;
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            border: 10px solid transparent;
+                            border-right-color: $backgroundColor;
+                            left: -18px;
+                            top: 20px;
+                        }
+                        >p {
+                            transform: scale(1.02, 1.02);
+                            color: #fff;
+                        }
+                        >h4 {
+                            color: #fff;
+                            >i {
+                                color: #fff;
+                            }
+                        }
+                    }
+                } //                .flash-right-active {
+                //                    position: relative; //background-color: #5E5E5E;
+                //                    background-color: $backgroundColor;
+                //                    border-radius: 5px;
+                //                    transform: scale(1.02, 1.02);
+                //                    >::before {
+                //                        content: '';
+                //                        position: absolute;
+                //                        border: 10px solid transparent;
+                //                        border-right-color: $backgroundColor;
+                //                        left: -18px;
+                //                        top: 20px;
+                //                    }
+                //                    >h4 {
+                //                        //color: #fff;
+                //                        color: $color;
+                //                        >i {
+                //                            //color: #fff;
+                //                            color: $color;
+                //                        }
+                //                    }
+                //                    >p {
+                //                        color: $color;
+                //                    }
+                //                }
+            }
+
+
+            >.flash-left,
+            .flash-right {
+                >div {
+                    //padding: 5px;
+                    margin: 3px 0px;
+                    background-color: #fafafa;
+                }
+            }
+            >.flash-center {
+                >div {
+                    //box-shadow: 0 0 10px silver;
+                    background-color: #fafafa;
+                }
+            }
+        }
+    }
+}

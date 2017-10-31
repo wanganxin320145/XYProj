@@ -16,7 +16,8 @@ module.exports.prototype.init = (function() {
     var setSelectors = function($box) {
         return {
             $selector: $box,
-            $container: $box.find('.container')
+            $container: $box.find('.container'),
+            $rightModule: $box.find('.col-md-4')
         };
     };
 
@@ -27,7 +28,13 @@ module.exports.prototype.init = (function() {
         options = setOptions(options);
         this.selector = setSelectors($(template(options.data)));
         var that = this;
-        
+        $(function() {
+            require('../RightModule/_rightModule.js')().init({
+                el: that.selector.$rightModule,
+                data: {}
+            });
+        });
+
         this.selector.$selector.appendTo(options.el);
         return this;
     };

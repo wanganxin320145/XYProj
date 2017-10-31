@@ -63,16 +63,25 @@ module.exports.prototype.init = (function() {
             });
             //var modules = [];
             that.selector.$menu.on('click','>ul>li',function(){
-                $(window.Modules).each(function(index,item){
-                    $('div[data-module="' + item + '"]').hide();      
-                });
                 
-                $('div[data-module="m-home"]').show();
+                
+                //$('div[data-module="m-home"]').show();
                 $('<span class="line-top"></span>').appendTo($(this));
                 $(this).addClass('menu-active');
                 $(this).siblings().removeClass('menu-active');
                 $(this).siblings().find('span').remove();
+
                 var moduleName = $(this).data('module');
+                if(window.Modules.indexOf(moduleName) > -1){
+                     $('div[data-module="' + moduleName + '"]').show();
+                     $(window.Modules).each(function(index,item){
+                            if(item != moduleName){
+                                $('div[data-module="' + item + '"]').hide();
+                            }
+                     }); 
+                     return;
+                }
+
                 if(moduleName === "m-questions"){
                     window.Modules.push(moduleName);
                     $('div[data-module="m-home"]').hide();

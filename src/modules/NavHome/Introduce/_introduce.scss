@@ -1,0 +1,74 @@
+.m-introduce {
+    padding: 70px 0px; //background-color: #eeeeee;
+    background-image: url(http://img.wqdian.com/group3/M00/7B/9C/yq0KZFZdxiOAFDOUAAL1G-ZAAa4326.jpg); //background-image: url(/images/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-attachment: fixed;
+    color: #fff;
+    >.container {
+        >.row {
+            >.main-title {
+                text-align: center;
+                >h2 {
+                    text-align: center;
+                    margin-bottom: 30px;
+                }
+                >h1 {
+                    //padding: 10px 0px;
+                    padding-bottom: 20px;
+                }
+                >p {
+                    font-size: 18px;
+                    padding: 10px 0px;
+                }
+                >.row {
+                    >.col-md-12 {
+
+                        >span {
+                            display: inline-block;
+                            position: relative;
+                            width: 120px;
+                            height: 100px;
+                            
+                            transition: all 1s ease-in-out;
+                            padding: 10px;
+                            img {
+                                width: 70px;
+                                height: 70px;
+                                opacity: .8;
+                                filter: alpha(opacity=80);
+                                box-shadow: 0 0 10px #fff;
+                                transition: all 3s ease-in-out;
+                                animation: circleRun 3s 0s infinite;
+                                margin-bottom: 5px;
+                            }
+                            >a {
+                                display: block;
+                                line-height: 30px;
+                                box-shadow: 0 0 10px #777;
+                                border-radius: 20px;
+                                transition: all .3s ease-in-out;
+                                color: #777;
+                                cursor: pointer;
+                                margin-top: 10px;
+                                &:hover{
+                                    color: #fff;
+                                    box-shadow: 0 0 10px #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+                @keyframes circleRun {
+                    0% {
+                        transform: rotate(0deg);
+                    }
+                    100% {
+                        transform: rotate(360deg);
+                    }
+                }
+            }
+        }
+    }
+}

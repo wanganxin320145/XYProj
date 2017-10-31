@@ -28,37 +28,38 @@ module.exports.prototype.init = (function() {
             window.Modules.push('m-home');
         }
         var main_selector = this.selector.$selector;
-        var m_flashPlay = require('../FlashPlay/_flashPlay.js')().init({
+        var m_flashPlay = require('./FlashPlay/_flashPlay.js')().init({
             el: main_selector,
             data: {}
         });
 
-        var m_introduce = require('../Introduce/_introduce.js')().init({
+        var m_introduce = require('./Introduce/_introduce.js')().init({
+            el: main_selector,
+            el_main:options.el_main,
+            data: {}
+        });
+
+        var m_productFeatures = require('./ProductFeatures/_productFeatures.js')().init({
             el: main_selector,
             data: {}
         });
 
-        var m_productFeatures = require('../ProductFeatures/_productFeatures.js')().init({
+        var m_serviceCenter = require('./ServiceCenter/_serviceCenter.js')().init({
             el: main_selector,
             data: {}
         });
 
-        var m_serviceCenter = require('../ServiceCenter/_serviceCenter.js')().init({
+        var m_teamSupport = require('./TeamSupport/_teamSupport.js')().init({
             el: main_selector,
             data: {}
         });
 
-        var m_teamSupport = require('../TeamSupport/_teamSupport.js')().init({
+        var m_cooperativePartner = require('./CooperativePartner/_cooperativePartner.js')().init({
             el: main_selector,
             data: {}
         });
 
-        var m_cooperativePartner = require('../CooperativePartner/_cooperativePartner.js')().init({
-            el: main_selector,
-            data: {}
-        });
-
-        var m_businessSection = require('../BusinessSection/_businessSection.js')().init({
+        var m_businessSection = require('./BusinessSection/_businessSection.js')().init({
             el: main_selector,
             data: {}
         });
