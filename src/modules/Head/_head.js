@@ -5,7 +5,7 @@ module.exports.prototype.init = (function() {
     var setOptions = (function() {
         var params = {
             el: null,
-            el_main:null,
+            el_main: null,
             data: {}
         };
         return function(options) {
@@ -17,11 +17,11 @@ module.exports.prototype.init = (function() {
     var setSelectors = function($box) {
         return {
             $selector: $box,
-            $header:$box.find('.m-header'),
+            $header: $box.find('.m-header'),
             $container: $box.find('.container'),
             $logo: $box.find('.m-head-logo'),
             $menu: $box.find('.m-head-menu'),
-            $colmd9:$box.find('.col-md-9'),
+            $colmd9: $box.find('.col-md-9'),
             $folder: $box.find('.floader'),
             $hiddenMenus: $box.find('.hidden-menus')
         };
@@ -29,7 +29,7 @@ module.exports.prototype.init = (function() {
 
     var resizeHanding = function(instance) {
         var $tabs_ul = instance.selector.$menu.find('>ul');
-        instance.selector.$header.css('position','fixed');
+        instance.selector.$header.css('position', 'fixed');
 
         instance.selector.$colmd9.show();
         //var $offs = instance.selector.$colmd9.offset();
@@ -41,7 +41,7 @@ module.exports.prototype.init = (function() {
         if (flag) {
             instance.selector.$folder.show();
             instance.selector.$colmd9.hide();
-            instance.selector.$header.css('position','relative');
+            instance.selector.$header.css('position', 'relative');
         } else {
             instance.selector.$folder.hide();
         }
@@ -55,16 +55,17 @@ module.exports.prototype.init = (function() {
     return function(options) {
         options = setOptions(options);
         this.selector = setSelectors($(template(options.data)));
-        var that = this,main_selector = options.el_main;
+        var that = this,
+            main_selector = options.el_main;
 
         $(function() {
             $(window).resize(function() {
                 U.debouncer(resizeHanding(that));
             });
             //var modules = [];
-            that.selector.$menu.on('click','>ul>li',function(){
-                
-                
+            that.selector.$menu.on('click', '>ul>li', function() {
+
+
                 //$('div[data-module="m-home"]').show();
                 $('<span class="line-top"></span>').appendTo($(this));
                 $(this).addClass('menu-active');
@@ -72,31 +73,31 @@ module.exports.prototype.init = (function() {
                 $(this).siblings().find('span').remove();
 
                 var moduleName = $(this).data('module');
-                if(window.Modules.indexOf(moduleName) > -1){
-                     $('div[data-module="' + moduleName + '"]').show();
-                     $(window.Modules).each(function(index,item){
-                            if(item != moduleName){
-                                $('div[data-module="' + item + '"]').hide();
-                            }
-                     }); 
-                     return;
+                // if(window.Modules.indexOf(moduleName) > -1){
+                //      $('div[data-module="' + moduleName + '"]').show();
+                //      $(window.Modules).each(function(index,item){
+                //             if(item != moduleName){
+                //                 $('div[data-module="' + item + '"]').hide();
+                //             }
+                //      }); 
+                //      return;
+                // }
+                if (!U.checkModule(moduleName)) {
+                    if (moduleName === "m-questions") {
+                        require('../Questions/questions.js')().init({
+                            el: main_selector,
+                            data: {}
+                        });
+                    }
                 }
 
-                if(moduleName === "m-questions"){
-                    window.Modules.push(moduleName);
-                    $('div[data-module="m-home"]').hide();
-                    require('../Questions/questions.js')().init({
-                        el:main_selector,
-                        data:{}
-                    });
-                }
 
             });
             $(that.selector.$folder[0]).on('click', 'span:nth-child(1)', function() {
                 that.selector.$hiddenMenus.slideToggle();
             });
-            that.selector.$selector.on('click','>.hidden-menus',function(){
-                 $(this).slideUp();
+            that.selector.$selector.on('click', '>.hidden-menus', function() {
+                $(this).slideUp();
             });
         });
 

@@ -33,26 +33,12 @@ module.exports.prototype.init = (function() {
             that.selector.$footerList.on('click', 'li', function() {
                 var moduleName = $(this).data('module');
                 if (moduleName === "m-questions") {
-                    if(window.Modules.indexOf(moduleName) > -1){
-                         $('div[data-module="' + moduleName + '"]').show();
-                         $(window.Modules).each(function(index,item){
-                                if(item != moduleName){
-                                    $('div[data-module="' + item + '"]').hide();
-                                }
-                         }); 
-                         return;
+                    if (!U.checkModule(moduleName)) {
+                        require('../Questions/questions.js')().init({
+                            el: options.el_main,
+                            data: {}
+                        });
                     }
-                    
-                    window.Modules.push(moduleName);
-                    $(window.Modules).each(function(index,item){
-                        if(item != moduleName){
-                            $('div[data-module="' + item + '"]').hide();
-                        }
-                    }); 
-                    require('../Questions/questions.js')().init({
-                        el: options.el_main,
-                        data: {}
-                    });
                 }
             });
         });

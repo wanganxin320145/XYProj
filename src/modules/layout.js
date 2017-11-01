@@ -11,9 +11,9 @@ module.exports = function(options) {
         $header = $box.find('.m-header-box'),
         $main = $box.find('.m-main-box'),
         $footer = $box.find('.m-footer-box');
-
     $box.appendTo(options.el);
 
+    window.MainBox=$main;
     var m_header = require('./Head/_head.js')().init({
         el: $header,
         el_main:$main,

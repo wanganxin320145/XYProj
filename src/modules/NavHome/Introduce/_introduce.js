@@ -5,7 +5,7 @@ module.exports.prototype.init = (function() {
     var setOptions = (function() {
         var params = {
             el: null,
-            el_main:null,
+            el_main: null,
             data: {}
         };
         return function(options) {
@@ -18,8 +18,8 @@ module.exports.prototype.init = (function() {
         return {
             $selector: $box,
             $container: $box.find('.container'),
-            $playCard:$box.find('.a_playCard'),
-            $playMoney:$box.find('.a_playMoney')
+            $playCard: $box.find('.a_playCard'),
+            $playMoney: $box.find('.a_playMoney')
         };
     };
 
@@ -31,12 +31,28 @@ module.exports.prototype.init = (function() {
         options = setOptions(options);
         this.selector = setSelectors($(template(options.data)));
         var that = this;
-        $(function(){
-            that.selector.$playCard.on('click',function(){
-                 require('./PlayCard/playCard.js')().init({
-                    el:options.el_main,
-                    data:{}
-                 });
+        $(function() {
+            that.selector.$playCard.on('click', function() {
+                var moduleName = $(this).data('module');
+                if (!U.checkModule(moduleName)) {
+                    require('./PlayCard/playCard.js')().init({
+                        el: options.el_main,
+                        moduleName:moduleName,
+                        data: {}
+                    });
+                }
+
+            });
+            that.selector.$playMoney.on('click', function() {
+                var moduleName = $(this).data('module');
+                if (!U.checkModule(moduleName)) {
+                    require('./PlayCard/playCard.js')().init({
+                        el: options.el_main,
+                        moduleName:moduleName,
+                        data: {}
+                    });
+                }
+
             });
         });
         this.selector.$selector.appendTo(options.el);

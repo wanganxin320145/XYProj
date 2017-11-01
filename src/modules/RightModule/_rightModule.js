@@ -26,7 +26,6 @@ module.exports.prototype.init = (function() {
         options = setOptions(options);
         this.selector = setSelectors($(template(options.data)));
         var that = this;
-        debugger;
         this.selector.$selector.appendTo(options.el);
         return this;
     };

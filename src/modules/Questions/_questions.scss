@@ -11,7 +11,7 @@ $background:#fff;
                     >.nav-tabs {}
                     >.tab-content {
                         background-color: #ebebeb;
-                        >#m-questions-playCard {
+                        >#m-questions-playCard,#m-questions-operation_a,#m-questions-operation_b {
                             >.question-content {
                                 margin: 10px auto;
                                 padding: 30px;
@@ -88,57 +88,6 @@ $background:#fff;
                 }
             }
             >.col-md-4 {
-
-                // >.qustion-nav {
-                //     padding: 20px;
-                //     margin: 30px auto;
-                //     background-color: $background;
-                //     .title {
-                //         border-bottom: 1px solid #ebebeb;
-                //         position: relative;
-                //         margin-bottom: 21px;
-                //         padding-bottom: 7px;
-                //     }
-                //     .hot {
-                //         color: #e67e22;
-                //         >i {
-                //             padding-right: 5px;
-                //         }
-                //     }
-
-                //     >h4 {
-                //         &::before {
-                //             content: '';
-                //             position: absolute;
-                //             width: 90px;
-                //             height: 1px;
-                //             left: 0;
-                //             bottom: -1px;
-                //             background-color: #0ba1e4;
-                //         }
-                //     }
-                //     >span {
-                //         padding: 2px 7px;
-                //         border: 1px solid #ebebeb;
-                //         color: #959595;
-                //         line-height: 1.5em;
-                //         display: inline-block;
-                //         margin: 0 7px 7px 0;
-                //         transition: all 0.2s ease;
-                //         font-size: 13px;
-                //         cursor: pointer;
-                //         &:hover {
-                //             background-color: #0ba1e4;
-                //             color: #fff;
-                //         }
-                //     }
-                // }
-                // >.img {
-                //     text-align: center;
-                //     >h4 {
-                //         text-align: left;
-                //     }
-                // }
             }
         }
     }

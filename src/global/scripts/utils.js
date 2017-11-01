@@ -154,16 +154,26 @@ window.U = {};
         }
     };
 
-    /*
-     随机生成GUID
-    */
-    function S4() {
-        return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
-    }
-    U.NewGuid = function() {
-        return (S4() + S4() + "-" + S4() + "-" + S4() + "-" + S4() + "-" + S4() + S4() + S4());
+    U.checkModule = function(module){
+        if(!module){
+            return true;
+        }
+        if(window.Modules.indexOf(module) > -1){
+                     $('div[data-module="' + module + '"]').show();
+                     $(window.Modules).each(function(index,item){
+                            if(item != module){
+                                $('div[data-module="' + item + '"]').hide();
+                            }
+                     }); 
+                     return true;
+        }else{
+             $(window.Modules).each(function(index,item){
+                $('div[data-module="' + item + '"]').hide();
+            }); 
+            window.Modules.push(module);
+            return false;
+        }
     };
-
     /*浏览器标识
      */
     U.webkit = /Webkit|Chrome|Safari/i.test(navigator.userAgent);
