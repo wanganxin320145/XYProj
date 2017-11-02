@@ -17,7 +17,9 @@ module.exports.prototype.init = (function() {
         return {
             $selector: $box,
             $container: $box.find('.container'),
-            $cardItem:$box.find('.card-area>.row>.col-md-3')
+            $cardItem: $box.find('.card-area>.row>.col-md-3'),
+            $cardLink: $box.find('.card-item>.card-content'),
+            $moreBtn: $box.find('.text-center')
         };
     };
 
@@ -29,10 +31,34 @@ module.exports.prototype.init = (function() {
         options = setOptions(options);
         this.selector = setSelectors($(template(options.data)));
         var that = this;
-        this.selector.$cardItem.on('mouseover','>.card-item',function(){
+        $(function() {
+            that.selector.$cardItem.on('mouseover', '>.card-item', function() {
                 $(this).addClass('card-active');
                 $(this).parent().siblings().find('.card-item').removeClass('card-active');
+            });
+            that.selector.$cardLink.on('click', '>a', function() {
+                var moduleName = $(this).data('module');
+                if (!U.checkModule(moduleName)) {
+                    require('../Introduce/PlayCard/playCard.js')().init({
+                        el: window.MainBox,
+                        moduleName: moduleName,
+                        data: {}
+                    });
+                }
+            });
+            that.selector.$moreBtn.on('click', '>a:nth-child(1)', function() {
+                var moduleName = $(this).data('module');
+                if (!U.checkModule(moduleName)) {
+                    require('../Introduce/PlayCard/playCard.js')().init({
+                        el: window.MainBox,
+                        moduleName: moduleName,
+                        data: {}
+                    });
+                }
+            });
         });
+
+
         this.selector.$selector.appendTo(options.el);
         return this;
     };

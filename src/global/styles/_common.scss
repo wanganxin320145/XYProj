@@ -14,33 +14,6 @@
 }
 
 
-
-//消息推送（数字和圆点）
-.message-num {
-    display: inline-block;
-    font-size: 12px;
-    text-indent: 0;
-    font-weight: normal;
-    line-height: 1;
-    padding: 1px 4px;
-    border-radius: 7px;
-    color: #fff;
-    background: rgba(#f30, .8);
-    &:empty {
-        display: none;
-    }
-}
-
-.message-dot {
-    display: inline-block;
-    height: 6px;
-    width: 6px;
-    border-radius: 50%;
-    background: rgba(#f30, .8);
-}
-
-
-
 //单行文本溢出自动带省略号
 .ellipsis {
     white-space: nowrap;

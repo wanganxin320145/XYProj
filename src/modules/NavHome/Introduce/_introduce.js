@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = Module._createSub('introduce');
+module.exports = Module._createSub('playCard');
 module.exports.prototype.init = (function() {
     var setOptions = (function() {
         var params = {

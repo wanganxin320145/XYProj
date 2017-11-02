@@ -49,15 +49,15 @@ module.exports.prototype.init = (function() {
             data: {}
         });
 
-        var m_teamSupport = require('./TeamSupport/_teamSupport.js')().init({
-            el: main_selector,
-            data: {}
-        });
+        // var m_teamSupport = require('./TeamSupport/_teamSupport.js')().init({
+        //     el: main_selector,
+        //     data: {}
+        // });
 
-        var m_cooperativePartner = require('./CooperativePartner/_cooperativePartner.js')().init({
-            el: main_selector,
-            data: {}
-        });
+        // var m_cooperativePartner = require('./CooperativePartner/_cooperativePartner.js')().init({
+        //     el: main_selector,
+        //     data: {}
+        // });
 
         var m_businessSection = require('./BusinessSection/_businessSection.js')().init({
             el: main_selector,

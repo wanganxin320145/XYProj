@@ -39,8 +39,7 @@
                                 opacity: .8;
                                 filter: alpha(opacity=80);
                                 box-shadow: 0 0 10px #fff;
-                                transition: all 3s ease-in-out;
-                                animation: circleRun 3s 0s infinite;
+                                animation: circleRun 3s 1s infinite;
                                 margin-bottom: 5px;
                             }
                             >a {

@@ -57,8 +57,8 @@ module.exports = function(env) {
     var M = {
 
         entry: { //打包入口
-            'libs': './src/libs.bundle.js',
-            'global': './src/global.bundle.js'
+            'libs': './src/libs.js',
+            'global': './src/global.js'
         },
 
         output: { //打包输出
@@ -71,7 +71,7 @@ module.exports = function(env) {
         plugins: [
             new htmlWebpackPlugin({ //应用入口html
                 template: './src/entry.html',
-                favicon: './src/global/images/favicon.ico',
+                favicon: './src/global/images/wz_favicon.ico',
                 filename: 'index.html',
                 inject: false,
                 minify: {

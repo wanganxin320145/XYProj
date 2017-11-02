@@ -40,6 +40,15 @@ module.exports.prototype.init = (function() {
                         });
                     }
                 }
+                if (moduleName === "m-play-card") {
+                    if (!U.checkModule(moduleName)) {
+                        require('../NavHome/Introduce/PlayCard/playCard.js')().init({
+                            el: window.MainBox,
+                            moduleName:moduleName,
+                            data: {}
+                        });
+                    }
+                }
             });
         });
         this.selector.$selector.appendTo(options.el);

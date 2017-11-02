@@ -44,7 +44,6 @@ module.exports.prototype.init = (function() {
             });
 
             that.selector.$breadcrumb.on('click', '>li>a', function() {
-                debugger;
                 var moduleName = $(this).data('module');
                 if (!U.checkModule(moduleName)) {
                     if (moduleName === "m-home") {

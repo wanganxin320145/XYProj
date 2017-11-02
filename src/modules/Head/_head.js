@@ -64,24 +64,34 @@ module.exports.prototype.init = (function() {
             });
             //var modules = [];
             that.selector.$menu.on('click', '>ul>li', function() {
-
-
-                //$('div[data-module="m-home"]').show();
                 $('<span class="line-top"></span>').appendTo($(this));
                 $(this).addClass('menu-active');
                 $(this).siblings().removeClass('menu-active');
                 $(this).siblings().find('span').remove();
-
                 var moduleName = $(this).data('module');
-                // if(window.Modules.indexOf(moduleName) > -1){
-                //      $('div[data-module="' + moduleName + '"]').show();
-                //      $(window.Modules).each(function(index,item){
-                //             if(item != moduleName){
-                //                 $('div[data-module="' + item + '"]').hide();
-                //             }
-                //      }); 
-                //      return;
-                // }
+                if (!U.checkModule(moduleName)) {
+                    if (moduleName === "m-questions") {
+                        require('../Questions/questions.js')().init({
+                            el: main_selector,
+                            data: {}
+                        });
+                    }
+                     if (moduleName === "m-company-introduce") {
+                        require('../Company/company.js')().init({
+                            el: main_selector,
+                            data: {}
+                        });
+                    }
+                }
+            });
+            $(that.selector.$folder[0]).on('click', 'span:nth-child(1)', function() {
+                that.selector.$hiddenMenus.slideToggle();
+            });
+            that.selector.$selector.on('click', '>.hidden-menus', function() {
+                $(this).slideUp();
+            });
+            that.selector.$hiddenMenus.on('click', '>ul>li', function() {
+                var moduleName = $(this).data('module');
                 if (!U.checkModule(moduleName)) {
                     if (moduleName === "m-questions") {
                         require('../Questions/questions.js')().init({
@@ -91,13 +101,6 @@ module.exports.prototype.init = (function() {
                     }
                 }
 
-
-            });
-            $(that.selector.$folder[0]).on('click', 'span:nth-child(1)', function() {
-                that.selector.$hiddenMenus.slideToggle();
-            });
-            that.selector.$selector.on('click', '>.hidden-menus', function() {
-                $(this).slideUp();
             });
         });
 
