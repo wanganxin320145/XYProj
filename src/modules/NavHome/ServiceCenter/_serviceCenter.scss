@@ -28,7 +28,7 @@
                     padding-top: 15px;
                     padding-bottom: 10px;
                     text-align: center;
-
+                    margin:10px 5%;
                     >span {
                         background-color: #fff;
                         color: #0ba1e4;
@@ -72,18 +72,18 @@
                         }
                     }
                 }
-                >.iconArea:nth-child(1),
-                .iconArea:nth-child(2),
-                .iconArea:nth-child(6),
-                .iconArea:nth-child(7) {
-                    padding-right: 140px;
-                }
-                >.iconArea:nth-child(4),
-                .iconArea:nth-child(5),
-                .iconArea:nth-child(9),
-                .iconArea:nth-child(10) {
-                    padding-left: 140px;
-                }
+//                >.iconArea:nth-child(1),
+//                .iconArea:nth-child(2),
+//                .iconArea:nth-child(6),
+//                .iconArea:nth-child(7) {
+//                    padding-right: 140px;
+//                }
+//                >.iconArea:nth-child(4),
+//                .iconArea:nth-child(5),
+//                .iconArea:nth-child(9),
+//                .iconArea:nth-child(10) {
+//                    padding-left: 140px;
+//                }
             }
         }
 

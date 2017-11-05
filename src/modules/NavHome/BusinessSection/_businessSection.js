@@ -39,11 +39,19 @@ module.exports.prototype.init = (function() {
             that.selector.$cardLink.on('click', '>a', function() {
                 var moduleName = $(this).data('module');
                 if (!U.checkModule(moduleName)) {
-                    require('../Introduce/PlayCard/playCard.js')().init({
-                        el: window.MainBox,
-                        moduleName: moduleName,
-                        data: {}
-                    });
+                    if (moduleName === 'm-questions') {
+                        require('../../Questions/questions.js')().init({
+                            el: window.MainBox,
+                            data: {}
+                        });
+                    } else {
+                        require('../Introduce/PlayCard/playCard.js')().init({
+                            el: window.MainBox,
+                            moduleName: moduleName,
+                            data: {}
+                        });
+                    }
+
                 }
             });
             that.selector.$moreBtn.on('click', '>a:nth-child(1)', function() {

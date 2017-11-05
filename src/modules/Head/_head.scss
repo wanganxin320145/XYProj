@@ -70,7 +70,6 @@ $activeColor:#0ba1e4;
                             margin: 0 auto;
                             overflow: hidden;
                             text-align: right;
-                            padding-left: 215px;
                             white-space:nowrap;
                             >li {
 
@@ -124,6 +123,9 @@ $activeColor:#0ba1e4;
                 display: block;
                 height: 30px;
                 padding: 0px 20px;
+                >i{
+                    padding:0px 10px;
+                }
                 &:hover {
                     color: #0ba1e4;
                     font-weight:bold;

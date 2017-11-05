@@ -27,18 +27,25 @@
                 }
                 >.slider-tips {
                     position: absolute;
+                    overflow:hidden;
                     top: 0px;
                     right: 48px;
                     height: 48px;
-                    padding-left: 10px;
-                    padding-right: 2px;
+                    //padding-left: 10px;
+                    //padding-right: 2px;
                     white-space: nowrap;
-                    border: 1px solid #0ba1e4;
+                    //border: 1px solid #0ba1e4;
                     background-color: #0ba1e4;
                     text-align: center;
                     line-height: 48px;
                     font-size: 18px;
                     color: #fff;
+                    width:0px;
+                    transition:all .5s ease;
+                    >img{
+                        width: 196px;
+                        height: 196px;
+                    }
                 }
                 >.slider-tips-wechat{
                 	position: absolute;
@@ -46,15 +53,25 @@
                     right: 48px;
                     white-space: nowrap;
                     border: 1px solid #0ba1e4;
+                    display:none;
                 	>img{
                 		width: 196px;
                 		height: 196px;
                 	}
                 }
                 &:hover {
-                    >div {
-                        display: block !important;
+                    >.slider-tips{
+                        width:130px;
+                        padding-left: 10px;
+                        padding-right: 2px;
+                        border: 1px solid #0ba1e4;
                     }
+                    >.slider-tips-wechat{
+                        display:block;
+                    }
+//                    >div {
+//                        display: block !important;
+//                    }
                 }
             }
         }

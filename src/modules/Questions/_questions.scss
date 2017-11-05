@@ -1,4 +1,5 @@
 $background:#fff;
+$mainColor:#0ba1e4;
 .m-questions {
     background-color: #ebebeb;
     >.container {
@@ -11,7 +12,20 @@ $background:#fff;
                     >.nav-tabs {}
                     >.tab-content {
                         background-color: #ebebeb;
-                        >#m-questions-playCard,#m-questions-operation_a,#m-questions-operation_b {
+                        .question-line {
+                            border-top: 1px solid #ebebeb;
+                        }
+                        .question-bottom {
+                            font-size: 14px;
+                            color: #959595;
+                            padding-top: 20px;
+                            >i {
+                                padding-right: 10px;
+                            }
+                        }
+                        >#m-questions-playCard,
+                        #m-questions-card_a,
+                        #m-questions-card_b {
                             >.question-content {
                                 margin: 10px auto;
                                 padding: 30px;
@@ -26,69 +40,144 @@ $background:#fff;
                                     font-size: 10px;
                                     margin-bottom: 30px;
                                 }
-                                >span {
+
+                                >.btn-read {
                                     display: block;
                                     width: 100px;
                                     height: 35px;
                                     line-height: 35px;
-                                    background-color: #0ba1e4;
+                                    background-color: $mainColor;
                                     text-align: center;
                                     color: #fff;
                                     border-radius: 5px;
                                     margin: 30px 0px;
+                                    cursor: pointer;
                                 }
-                                >p {
+                                p {
                                     font-size: 16px;
                                     >span {
                                         color: #FF9900;
                                         font-size: 12px;
                                     }
                                 }
-                                >.question-line {
-                                    border-top: 1px solid #ebebeb;
-                                }
-                                >.question-bottom {
-                                    font-size: 14px;
-                                    color: #959595;
-                                    padding-top: 20px;
-                                    >i {
-                                        padding-right: 10px;
+
+                                >.read-more {
+                                    display: none;
+                                    >h4 {
+                                        font-weight:bold;
+                                        >i {
+                                            // color: $mainColor;    
+                                            // padding-right: 10px;
+                                            // font-size: 16px;
+                                            color: #fff;
+                                            padding-right: 10px;
+                                            padding-left: 5px;
+                                            font-size: 18px;
+                                            font-weight: bold;
+                                            border-radius: 50%;
+                                            background-color: $mainColor;
+                                            margin-right: 10px;
+                                            box-shadow: 0 0 5px silver;
+                                        }
                                     }
                                 }
                             }
                         }
-                        >#m-questions-playMoney{
-                            >.playMoneyContent{
+
+                        >#m-questions-playMoney {
+                            >.playMoneyContent {
                                 margin: 10px auto;
                                 padding: 30px;
                                 background-color: $background;
-                                >ul{
-                                    >li{
-                                        >h5{
+                                img {
+                                    margin: 0 auto;
+                                }
+                                >ul {
+                                    >li {
+                                        >h5 {
                                             line-height: 30px;
                                             font-weight: bold;
+                                            font-size: 16px;
+                                            text-indent: 2em;
                                         }
-                                      >p{
-                                        font-size: 14px;
-                                        padding-top: 5px;
-                                        font-size: 14px;
-                                      }
+                                        >p {
+                                            font-size: 14px;
+                                            padding-top: 5px;
+                                            font-size: 14px;
+                                        }
                                     }
                                 }
-                                >p{
-                                    >i{
-                                        color: #0ba1e4;    
+                                >p {
+                                    font-size: 16px;
+                                    font-weight: bold;
+                                    >i {
+                                        // color: $mainColor;    
+                                        // padding-right: 10px;
+                                        // font-size: 16px;
+                                        color: #fff;
                                         padding-right: 10px;
-                                        font-size: 16px;
+                                        padding-left: 5px;
+                                        font-size: 18px;
+                                        font-weight: bold;
+                                        border-radius: 50%;
+                                        background-color: $mainColor;
+                                        margin-right: 10px;
+                                        box-shadow: 0 0 5px silver;
                                     }
                                 }
-                            }    
+                            }
+                        }
+
+                        >#m-questions-operation_a,
+                        #m-questions-operation_b,
+                        #m-questions-regin_a,
+                        #m-questions-regin_b {
+                            h2 {
+                                font-size: 35px;
+                                text-align: center;
+                            }
+                            h4 {
+                                text-align: left;
+                                font-weight: bold;
+                                padding-top: 20px;
+                                color: #FF9900;
+                            }
+                            .summary {
+                                text-align: center;
+                                color: #959595;
+                                font-size: 10px;
+                                margin-bottom: 30px;
+                            }
+                            img {
+                                margin: 0 auto;
+                            }
+                            >.operationContent {
+                                text-align: center;
+                                margin: 10px auto;
+                                padding: 30px;
+                                background-color: $background;
+                                >p {
+                                    text-align: left;
+                                    font-size: 16px;
+                                    font-weight: bold;
+                                    >i {
+                                        color: #fff;
+                                        padding-right: 10px;
+                                        padding-left: 5px;
+                                        font-size: 18px;
+                                        font-weight: bold;
+                                        border-radius: 50%;
+                                        background-color: $mainColor;
+                                        margin-right: 10px;
+                                        box-shadow: 0 0 5px silver;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
             }
-            >.col-md-4 {
-            }
+            >.col-md-4 {}
         }
     }
 }

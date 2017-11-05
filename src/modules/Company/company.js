@@ -81,6 +81,18 @@ module.exports.prototype.init = (function() {
             that.selector.$logos.on('mouseover', 'img', function() {
                 $(this).toggleClass('img-active');
             });
+
+            that.selector.$introduceTitle.on('click','.m_home',function(){
+                var moduleName = $(this).data('module');
+                if (!U.checkModule(moduleName)) {
+                    if (moduleName === "m-home") {
+                        require('../NavHome/home.js')().init({
+                            el: window.MainBox,
+                            data: {}
+                        });
+                    }
+                }
+            });
         });
         this.selector.$selector.appendTo(options.el);
         return this;

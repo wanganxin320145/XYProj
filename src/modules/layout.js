@@ -10,7 +10,8 @@ module.exports = function(options) {
     var $box = $(temp()),
         $header = $box.find('.m-header-box'),
         $main = $box.find('.m-main-box'),
-        $footer = $box.find('.m-footer-box');
+        $footer = $box.find('.m-footer-box'),
+        $slider = $box.find('.right-slider');
     $box.appendTo(options.el);
 
     window.MainBox=$main;
@@ -40,5 +41,9 @@ module.exports = function(options) {
         el: $footer,
         el_main:$main,
         data: { }
+    });
+
+    $slider.find('#slider-goTop').on('click',function(){
+        $("html,body").animate({scrollTop:0},800);
     });
 };

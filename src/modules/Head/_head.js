@@ -35,7 +35,8 @@ module.exports.prototype.init = (function() {
         //var $offs = instance.selector.$colmd9.offset();
         var $offs = $tabs_ul.find('>li:nth-child(3)').offset();
         var flag = false;
-        if ($offs.top >= instance.selector.$colmd9.height() / 2) {
+        var scrollTop = $(window).scrollTop();
+        if ($offs.top-scrollTop >= instance.selector.$colmd9.height() / 2) {
             flag = true;
         }
         if (flag) {
@@ -69,7 +70,7 @@ module.exports.prototype.init = (function() {
                 $(this).siblings().removeClass('menu-active');
                 $(this).siblings().find('span').remove();
                 var moduleName = $(this).data('module');
-                if (!U.checkModule(moduleName)) {
+                if (!U.checkModule(moduleName,true)) {
                     if (moduleName === "m-questions") {
                         require('../Questions/questions.js')().init({
                             el: main_selector,
@@ -95,6 +96,12 @@ module.exports.prototype.init = (function() {
                 if (!U.checkModule(moduleName)) {
                     if (moduleName === "m-questions") {
                         require('../Questions/questions.js')().init({
+                            el: main_selector,
+                            data: {}
+                        });
+                    }
+                    if (moduleName === "m-company-introduce") {
+                        require('../Company/company.js')().init({
                             el: main_selector,
                             data: {}
                         });

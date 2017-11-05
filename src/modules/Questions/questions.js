@@ -17,7 +17,10 @@ module.exports.prototype.init = (function() {
         return {
             $selector: $box,
             $container: $box.find('.container'),
-            $rightModule: $box.find('.col-md-4')
+            $rightModule: $box.find('.col-md-4'),
+            $tabContent:$box.find('.tab-content'),
+            $cardATab:$box.find('#m-questions-card_a'),
+            $cardBTab:$box.find('#m-questions-card_b')
         };
     };
 
@@ -33,6 +36,11 @@ module.exports.prototype.init = (function() {
                 el: that.selector.$rightModule,
                 data: {}
             });
+            that.selector.$tabContent.on('click','.btn-read',function(){
+                $(this).prev('div').show();
+                $(this).hide();
+            });
+            //that.selector.$cardBTab.on('click','.btn-read')
         });
 
         this.selector.$selector.appendTo(options.el);
