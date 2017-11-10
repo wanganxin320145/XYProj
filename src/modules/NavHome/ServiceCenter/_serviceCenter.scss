@@ -12,13 +12,13 @@ $mainColor:#0099ff;
         padding-bottom: 50px;
         >.row {
             >.col-md-12 {
+                padding:0px;
                 >.service-title {
                     width: 100%;
                     text-align: center;
                     padding-top: 50px;
                     padding-bottom: 10px;
                     color: #D3D3D3;
-                    >h2 {}
                     >p {
                         color: #808080;
                         padding-top: 5px;
@@ -29,7 +29,7 @@ $mainColor:#0099ff;
                     padding-top: 15px;
                     padding-bottom: 10px;
                     text-align: center;
-                    margin:10px 5%;
+                    margin:10px 5.1%;
                     >span {
                         background-color: #fff;
                         color: $mainColor;
