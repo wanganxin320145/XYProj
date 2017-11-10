@@ -65,6 +65,7 @@ module.exports.prototype.init = (function() {
             });
             //var modules = [];
             that.selector.$menu.on('click', '>ul>li', function() {
+                $(window.MainPicScroll).show();
                 $('<span class="line-top"></span>').appendTo($(this));
                 $(this).addClass('menu-active');
                 $(this).siblings().removeClass('menu-active');
@@ -83,6 +84,12 @@ module.exports.prototype.init = (function() {
                             data: {}
                         });
                     }
+                    if (moduleName === "m-zhaoshang") {
+                        require('../ZhaoShang/zhaoshang.js')().init({
+                            el: main_selector,
+                            data: {}
+                        });
+                    }
                 }
             });
             $(that.selector.$folder[0]).on('click', 'span:nth-child(1)', function() {
@@ -92,6 +99,7 @@ module.exports.prototype.init = (function() {
                 $(this).slideUp();
             });
             that.selector.$hiddenMenus.on('click', '>ul>li', function() {
+                $(window.MainPicScroll).show();
                 var moduleName = $(this).data('module');
                 if (!U.checkModule(moduleName)) {
                     if (moduleName === "m-questions") {
@@ -102,6 +110,12 @@ module.exports.prototype.init = (function() {
                     }
                     if (moduleName === "m-company-introduce") {
                         require('../Company/company.js')().init({
+                            el: main_selector,
+                            data: {}
+                        });
+                    }
+                     if (moduleName === "m-zhaoshang") {
+                        require('../ZhaoShang/zhaoshang.js')().init({
                             el: main_selector,
                             data: {}
                         });

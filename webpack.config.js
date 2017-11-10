@@ -58,7 +58,8 @@ module.exports = function(env) {
 
         entry: { //打包入口
             'libs': './src/libs.js',
-            'global': './src/global.js'
+            'global': './src/global.js',
+            'businessGlobal':'./src/businessGlobal.js'
         },
 
         output: { //打包输出
@@ -73,6 +74,16 @@ module.exports = function(env) {
                 template: './src/entry.html',
                 favicon: './src/global/images/wz_favicon.ico',
                 filename: 'index.html',
+                inject: false,
+                minify: {
+                    removeComments: QA || PROD,
+                    collapseWhitespace: QA || PROD
+                }
+            }),
+            new htmlWebpackPlugin({ //应用入口html
+                template: './src/business.html',
+                favicon: './src/global/images/wz_favicon.ico',
+                filename: 'business.html',
                 inject: false,
                 minify: {
                     removeComments: QA || PROD,

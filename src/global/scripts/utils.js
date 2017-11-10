@@ -44,6 +44,9 @@ window.U = {};
         if (window.Modules.indexOf(module) > -1) {
             $('div[data-module="' + module + '"]').show();
             $(window.Modules).each(function(index, item) {
+                if(module === 'm-zhaoshang'){
+                    $(window.MainPicScroll).hide();    
+                }
                 if (item != module) {
                     $('div[data-module="' + item + '"]').hide();
                 }

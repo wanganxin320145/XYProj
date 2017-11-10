@@ -1,3 +1,4 @@
+$mainColor:#0099ff;
 .m-pic-scroll {
     >.carousel {
         >.carousel-inner {
@@ -16,11 +17,10 @@
                         color:rgb(255,255,255);
                         text-align:center;
                         >.imgbox{
-//                            width: 200px;
-//                            height: 200px;
                             >img{
                                 max-height: 200px;
                                 animation:wxscale 1s 0s infinite;
+                                margin:0 auto;
                             }
                         }
                         
@@ -59,6 +59,8 @@
                     }
         			>img{
                         //width:1920px; max-width:1920px; margin-left:0px;
+                        margin:0 auto;
+                        width: 100%;
         			}
         		}
         	}

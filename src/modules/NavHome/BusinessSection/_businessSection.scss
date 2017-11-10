@@ -1,6 +1,7 @@
+$mainColor:#0099ff;
 @mixin cardActive() {
-    background-color: #0ba1e4;
-    border: 1px solid #0ba1e4;
+    background-color: $mainColor;
+    border: 1px solid $mainColor;
     box-shadow: 0 0 20px rgba(45, 183, 245, .5);
     color: #fff;
     z-index: 11;
@@ -45,7 +46,7 @@
                                         font-weight: bold;
                                     }
                                     >i {
-                                        color: #0ba1e4;
+                                        color: $mainColor;
                                     }
                                 }
                                 >.card-content {
@@ -65,15 +66,15 @@
                                     >.btn {
                                         transition: all 0.3s ease-in-out;
                                         &:hover {
-                                            color: #0ba1e4;
+                                            color: $mainColor;
                                             background: #ffffff;
-                                            border-color: #0ba1e4;
+                                            border-color: $mainColor;
                                         }
                                     }
                                     >.btn-outline-blue {
-                                        color: #0ba1e4;
+                                        color: $mainColor;
                                         background: transparent;
-                                        border-color: #0ba1e4;
+                                        border-color: $mainColor;
                                     }
                                 }
                             }
@@ -83,7 +84,7 @@
                                 transform: scale(1.1, 1.1);
                                 >.card-content {
                                     >.btn {
-                                        background-color: #0ba1e4;
+                                        background-color: $mainColor;
                                         border: 1px solid #ffffff;
                                         color: #ffffff;
                                     }
@@ -102,15 +103,15 @@
             >.text-center {
                 padding-bottom:50px;
                 >.btn {
-                    color: #0ba1e4;
+                    color: $mainColor;
                     background: transparent;
-                    border-color: #0ba1e4;
+                    border-color: $mainColor;
                     transition: all 0.3s ease-in-out;
                     padding: 10px 20px;
                     &:hover {
                         color: #fff;
-                        background: #0ba1e4;
-                        border-color: #0ba1e4;
+                        background: $mainColor;
+                        border-color: $mainColor;
                     }
                 }
             }

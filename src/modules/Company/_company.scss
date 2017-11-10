@@ -1,4 +1,5 @@
-$mainColor:#0ba1e4;
+//$mainColor:#0ba1e4;
+$mainColor:#0099ff;
 .m-company-introduce {
     i {
         padding: 0px 6px;
@@ -16,9 +17,10 @@ $mainColor:#0ba1e4;
                         }
                     }
                     >.leftmenu {
-                        padding:20px 0px;
+                        padding: 20px 0px;
                         .nav_active {
-                            background-color: $mainColor;
+                            //background-color: $mainColor;
+                            background-color: #0099ff;
                             color: #fff;
                             font-weight: bold;
                             >i {
@@ -35,13 +37,13 @@ $mainColor:#0ba1e4;
                                 border-bottom: 1px dashed silver;
                                 font-size: 16px;
                                 cursor: pointer;
-                                padding-left:10px;
-                                transition:all 0.2s ease-in-out;
-                                >i{
-                                	transition:all 0.2s ease-in-out;
+                                padding-left: 10px;
+                                transition: all 0.2s ease-in-out;
+                                >i {
+                                    transition: all 0.2s ease-in-out;
                                 }
-                                &:hover{
-									//box-shadow: 0px 1px 10px $mainColor;
+                                &:hover {
+                                    //box-shadow: 0px 1px 10px $mainColor;
                                     border-left: 2px solid $mainColor;
                                     border-right: 2px solid $mainColor;
                                 }
@@ -54,11 +56,9 @@ $mainColor:#0ba1e4;
                 >.introduce_main {
                     margin-top: 30px;
                     text-align: center;
-                    >.introduce_product,
-                    .introduce_company,
-                    .introduce_support,
+                    
+                    >.introduce_support,
                     .introduce_certificate,
-                    .introduce_lxf,
                     .introduce_market,
                     .introduce_price,
                     {
@@ -66,17 +66,25 @@ $mainColor:#0ba1e4;
                     }
                     >.introduce_product,
                     .introduce_company,
-                    .introduce_support{
-                        >img{
-                            padding-bottom:10px;
-                            margin-bottom:20px;
+                    .introduce_lxf {
+                        text-indent: 2em;
+                        padding: 30px 70px;
+                    }
+                    >.introduce_product,
+                    .introduce_company,
+                    .introduce_support {
+                        >img {
+                            padding-bottom: 10px;
+                            margin-bottom: 20px;
                         }
                     }
+                    small {
+                        color: #FF9900;
+                    }
                     p {
-                        text-align: left;
-                        text-indent: 2em;
+                        text-align: left; //text-indent: 2em;
                         font-size: 15px;
-                        line-height: 30px;
+                        line-height: 30px; //padding:5px 20px;
                     }
                     h2 {
                         padding-bottom: 10px;
@@ -95,9 +103,9 @@ $mainColor:#0ba1e4;
                             }
                         }
                         >.btn_certificate {
-                            padding-top: 20px;
-                            >input{
-                                margin:5px 1px;
+                            padding: 10px 0px;
+                            >input {
+                                margin: 10px 1px;
                             }
                             >.btn {
                                 &:hover {
@@ -117,7 +125,7 @@ $mainColor:#0ba1e4;
                         //border: 5px solid $mainColor;
                         box-shadow: 0 0 15px silver;
                         border-radius: 10px;
-                        margin:10px auto;
+                        margin: 10px auto;
                     }
                     .introduce_active {
                         display: block!important;
@@ -149,7 +157,7 @@ $mainColor:#0ba1e4;
                         p {
                             color: #000000;
                         }
-                        img{
+                        img {
                             border: 5px solid $mainColor;
                         }
                         .team_box {
@@ -201,7 +209,7 @@ $mainColor:#0ba1e4;
                                         border-radius: 50%;
                                         text-align: center;
                                         cursor: pointer;
-                                        margin:0 auto;
+                                        margin: 0 auto;
                                         >i {
                                             font-size: 80px;
                                             padding-top: 40px;
@@ -295,15 +303,15 @@ $mainColor:#0ba1e4;
                             height: auto;
                             border: 1px solid $mainColor;
                             margin: 10px auto;
-                            padding:20px;
+                            padding: 20px;
                             border-radius: 10px;
                             background-color: $mainColor;
                             color: #fff;
                             box-shadow: 0 0 10px silver;
-                            transition:all 0.3s ease;
+                            transition: all 0.3s ease;
                             cursor: pointer;
-                            &:hover{
-                            	transform:scale(1.1,1.1);
+                            &:hover {
+                                transform: scale(1.1, 1.1);
                             }
                         }
                     }

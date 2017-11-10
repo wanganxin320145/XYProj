@@ -1,4 +1,5 @@
 $color:#fdc900;
+$mainColor:#0099ff;
 .m-product-features {
     >.container {
         //border:1px solid red;
@@ -132,7 +133,7 @@ $color:#fdc900;
                                             padding-top: 25px;
                                         }
                                         &:hover {
-                                            background-color: #0ba1e4;
+                                            background-color: $mainColor;
                                             
                                             >i {
                                                 color: #fff;
@@ -198,7 +199,7 @@ $color:#fdc900;
                                             padding-top: 25px;
                                         }
                                         &:hover {
-                                            background-color: #0ba1e4;
+                                            background-color: $mainColor;
                                             >i {
                                                 color: #fff;
                                             }

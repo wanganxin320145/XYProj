@@ -15,6 +15,7 @@ module.exports = function(options) {
     $box.appendTo(options.el);
 
     window.MainBox=$main;
+    window.MainPicScroll = ".m-pic-scroll";
     var m_header = require('./Head/_head.js')().init({
         el: $header,
         el_main:$main,
@@ -23,6 +24,7 @@ module.exports = function(options) {
 
     var m_picScroll = require('./PicScroll/_picScroll.js')().init({
         el: $main,
+        el_main:$main,
         data: { }
     });
 

@@ -1,6 +1,7 @@
 $color:#fdc900;
 $backgroundColor:#333333;
-//$backgroundColor:#0ba1e4;
+//$backgroundColor:$mainColor;
+$mainColor:#0099ff;
 .m-flash-play {
     >.container {
         padding-top: 30px;
@@ -22,10 +23,10 @@ $backgroundColor:#333333;
             h4 {
                 text-align: center;
                 cursor: pointer;
-                color: #0ba1e4;
+                color: $mainColor;
                 font-weight: bold;
                 >i {
-                    padding-right: 10px; //color:#0ba1e4;
+                    padding-right: 10px; //color:$mainColor;
                 }
             }
             >.flash-left {

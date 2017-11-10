@@ -35,6 +35,7 @@ module.exports.prototype.init = (function() {
         options = setOptions(options);
         this.selector = setSelectors($(template(options.data)));
         var that = this;
+        $(window.MainPicScroll).show();
         $(function() {
             //左侧菜单导航
             that.selector.$leftMenu.on('click', '>ul>li', function() {
